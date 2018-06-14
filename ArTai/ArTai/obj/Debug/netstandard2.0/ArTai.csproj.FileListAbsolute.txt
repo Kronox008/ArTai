@@ -7,3 +7,6 @@ C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\ArTai.A
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\ArTai.AssemblyInfo.cs
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\ArTai.dll
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\ArTai.pdb
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\XamlC.stamp
