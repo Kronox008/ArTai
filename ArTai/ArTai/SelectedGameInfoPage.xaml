@@ -2,11 +2,32 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ArTai.SelectedGameInfoPage">
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+        <Grid BackgroundColor="Black"
+               
+              RowSpacing="10"
+              ColumnSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+
+            <Image x:Name="SelectedDeckPoster" Opacity="0.2" Aspect="AspectFill" Grid.RowSpan="6" Grid.Column="0"></Image>
+            <StackLayout Grid.Row="1" Grid.Column="0" VerticalOptions="StartAndExpand" BackgroundColor="#772F4F4F">
+                <Label x:Name="deckinfoLabel" FontSize="Large" Margin="10" ></Label>
+            </StackLayout>
+            <Button  x:Name="playselecteddeckButton" Grid.Row="3" Grid.Column="0" Margin="60,0,60,0" Clicked="PlayselecteddeckButton_Clicked"></Button>
+
+
+            <!--<AbsoluteLayout Grid.RowSpan="1" Grid.ColumnSpan="5">
+                <Button Image="settings24.png" x:Name="SettingsButton" Clicked="SettingsButton_Clicked"
+                        BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="1, 0.6, 1, 1"  AbsoluteLayout.LayoutFlags="PositionProportional" ></Button>
+            </AbsoluteLayout>-->
+            <!--<Button x:Name="SettingsButton" Grid.Row="0" Grid.ColumnSpan="5" Clicked="SettingsButton_Clicked" HorizontalOptions="EndAndExpand" VerticalOptions="Center"></Button>-->
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

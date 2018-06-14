@@ -2,7 +2,27 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ArTai.App">
-	<Application.Resources>
-    
-	</Application.Resources>
+    <Application.Resources>
+        <!--renew-->
+        <ResourceDictionary>
+            <Color x:Key="buttonsBackground">#77d35400</Color>
+            <Color x:Key="buttonsText">#ececec</Color>
+            <Color x:Key="correctbuttonsBackground">#50c878</Color>
+            <Color x:Key="skipbuttonsBackground">#ff0033</Color>
+
+            <Style x:Key="normalButton"  TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource buttonsBackground}"/>
+                <Setter Property="TextColor" Value="{StaticResource buttonsText}"/>
+            </Style>
+            <Style x:Key="correctButton"  TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource correctbuttonsBackground}"/>
+                <Setter Property="TextColor" Value="{StaticResource buttonsText}"/>
+            </Style>
+            <Style x:Key="skipButton"  TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource skipbuttonsBackground}"/>
+                <Setter Property="TextColor" Value="{StaticResource buttonsText}"/>
+            </Style>
+        </ResourceDictionary>
+
+    </Application.Resources>
 </Application>

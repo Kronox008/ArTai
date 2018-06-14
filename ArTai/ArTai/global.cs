@@ -1,4 +1,4 @@
-﻿using Plugin.SimpleAudioPlayer.Abstractions;
+﻿using Plugin.SimpleAudioPlayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;

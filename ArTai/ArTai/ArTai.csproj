@@ -5,8 +5,76 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Sounds\Animals\Narwhals.mp3" />
+    <None Remove="Sounds\chestOPEN.mp3" />
+    <None Remove="Sounds\conjure_item.mp3" />
+    <None Remove="Sounds\dot.mp3" />
+    <None Remove="Sounds\draenei_chest_anims_close.mp3" />
+    <None Remove="Sounds\friends\couldie.mp3" />
+    <None Remove="Sounds\friends\howdoing.mp3" />
+    <None Remove="Sounds\friends\ripped.mp3" />
+    <None Remove="Sounds\friends\secrets.mp3" />
+    <None Remove="Sounds\friends\smellyct.mp3" />
+    <None Remove="Sounds\glueenterworldbutton.mp3" />
+    <None Remove="Sounds\GOT\got_s1e5_pays_his_debts.wav" />
+    <None Remove="Sounds\GOT\got_s1e7_win_or_die.wav" />
+    <None Remove="Sounds\HP\avadakedavra.wav" />
+    <None Remove="Sounds\HP\lumosmaxima.wav" />
+    <None Remove="Sounds\HP\require.wav" />
+    <None Remove="Sounds\igplayerinvitedecline.mp3" />
+    <None Remove="Sounds\LoTR\death.wav" />
+    <None Remove="Sounds\LoTR\king.wav" />
+    <None Remove="Sounds\LoTR\reddawn.wav" />
+    <None Remove="Sounds\LoTR\shallnotpass.wav" />
+    <None Remove="Sounds\LoTR\task.wav" />
+    <None Remove="Sounds\LoTR\tried.wav" />
+    <None Remove="Sounds\lvlUP.mp3" />
+    <None Remove="Sounds\Myth\arkantosarrive.wav" />
+    <None Remove="Sounds\Myth\godpower.wav" />
+    <None Remove="Sounds\Myth\xsentinelbirth.wav" />
+    <None Remove="Sounds\Myth\xwin.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Sounds\Animals\Narwhals.mp3" />
+    <EmbeddedResource Include="Sounds\chestOPEN.mp3" />
+    <EmbeddedResource Include="Sounds\conjure_item.mp3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sounds\dot.mp3" />
+    <EmbeddedResource Include="Sounds\draenei_chest_anims_close.mp3" />
+    <EmbeddedResource Include="Sounds\friends\couldie.mp3" />
+    <EmbeddedResource Include="Sounds\friends\howdoing.mp3" />
+    <EmbeddedResource Include="Sounds\friends\ripped.mp3" />
+    <EmbeddedResource Include="Sounds\friends\secrets.mp3" />
+    <EmbeddedResource Include="Sounds\friends\smellyct.mp3" />
+    <EmbeddedResource Include="Sounds\glueenterworldbutton.mp3" />
+    <EmbeddedResource Include="Sounds\GOT\got_s1e5_pays_his_debts.wav" />
+    <EmbeddedResource Include="Sounds\GOT\got_s1e7_win_or_die.wav" />
+    <EmbeddedResource Include="Sounds\HP\avadakedavra.wav" />
+    <EmbeddedResource Include="Sounds\HP\lumosmaxima.wav" />
+    <EmbeddedResource Include="Sounds\HP\require.wav" />
+    <EmbeddedResource Include="Sounds\igplayerinvitedecline.mp3" />
+    <EmbeddedResource Include="Sounds\LoTR\death.wav" />
+    <EmbeddedResource Include="Sounds\LoTR\king.wav" />
+    <EmbeddedResource Include="Sounds\LoTR\reddawn.wav" />
+    <EmbeddedResource Include="Sounds\LoTR\shallnotpass.wav" />
+    <EmbeddedResource Include="Sounds\LoTR\task.wav" />
+    <EmbeddedResource Include="Sounds\LoTR\tried.wav" />
+    <EmbeddedResource Include="Sounds\lvlUP.mp3" />
+    <EmbeddedResource Include="Sounds\Myth\arkantosarrive.wav">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sounds\Myth\godpower.wav" />
+    <EmbeddedResource Include="Sounds\Myth\xsentinelbirth.wav" />
+    <EmbeddedResource Include="Sounds\Myth\xwin.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="sqlite-net-pcl" Version="1.4.118" />
     <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.1.0" />
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.561731" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.3.840" />
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.530893" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,5 +96,9 @@
     <EmbeddedResource Update="Settings.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 </Project>

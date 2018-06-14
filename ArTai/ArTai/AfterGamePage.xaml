@@ -1,12 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ArTai.AfterGamePage">
+             x:Class="ArTai.AfterGamePage"
+             BackgroundColor="Black"
+             >
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <Grid BackgroundColor="Black"
+              ColumnSpacing="10"
+              >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+                <Label x:Name="ScoreLabel" FontSize="26" Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="Center" Margin="0, 5, 0, 0"></Label>
+                <StackLayout x:Name="XAMLSTACK" Grid.Row="1" Grid.ColumnSpan="2"></StackLayout>
+                <Image x:Name="SelectedDeckPoster" Opacity="0.1" Aspect="AspectFill" Grid.RowSpan="4" Grid.ColumnSpan="2"></Image>
+                <Button x:Name="MenuButton"  Text="Menu" Grid.Row="2" Grid.Column="0" Clicked="MenuButton_Clicked" ></Button>
+                <Button x:Name="AgainButton" Grid.Row="2" Grid.Column="1" Clicked="AgainButton_Clicked"></Button>
+
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
+
+  

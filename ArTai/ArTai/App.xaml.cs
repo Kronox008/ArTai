@@ -1,32 +1,61 @@
 using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Reflection;
 
-[assembly: XamlCompilation (XamlCompilationOptions.Compile)]
+using Xamarin.Forms;
+using FFImageLoading.Forms;
+
 namespace ArTai
 {
-	public partial class App : Application
-	{
-		public App ()
-		{
-			InitializeComponent();
+    public partial class App : Application
+    {
+        public static string DatabaseLocation = string.Empty;
+        public App()
+        {
+            InitializeComponent();
+            //Settings CheckSQL = new Settings();
+            //CheckSQL.SQLConnection();
 
-			MainPage = new MainPage();
-		}
 
-		protected override void OnStart ()
-		{
-			// Handle when your app starts
-		}
 
-		protected override void OnSleep ()
-		{
-			// Handle when your app sleeps
-		}
+            MainPage = new NavigationPage(new GameSelectionPage())
+            {
+                //BarBackgroundColor = Color.FromHex(Global.ButtonBackColor),
+                //BarTextColor = Color.FromHex(Global.ButtonTextWhiteColor),
 
-		protected override void OnResume ()
-		{
-			// Handle when your app resumes
-		}
-	}
+            };
+
+        }
+        //public App(string databaseLocation)
+        //{
+        //    InitializeComponent();
+
+        //    MainPage = new NavigationPage(new GameSelectionPage())
+        //    {
+        //        BarBackgroundColor = Color.FromHex(Global.ButtonBackColor),
+        //        BarTextColor = Color.FromHex(Global.ButtonTextColor),
+        //    };
+        //    DatabaseLocation = databaseLocation;
+        //}
+
+        protected override void OnStart()
+        {
+            // Handle when your app starts
+        }
+
+        protected override void OnSleep()
+        {
+            // Handle when your app sleeps
+        }
+
+        protected override void OnResume()
+        {
+            // Handle when your app resumes
+        }
+
+
+
+    }
 }

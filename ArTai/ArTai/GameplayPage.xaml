@@ -1,12 +1,68 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ArTai.GameplayPage">
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="ArTai.GameplayPage"
+             BackgroundColor="Black">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+
+        <Grid BackgroundColor="Black"
+              
+              >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="0" />
+            </Grid.RowDefinitions>
+
+
+
+
+
+
+
+            <!--<Image x:Name="StaticBG" Grid.RowSpan="3" Grid.ColumnSpan="2" Aspect="AspectFill" Opacity="0.3"></Image>-->
+            <!--<BoxView BackgroundColor="Black" WidthRequest="500" HeightRequest="500" Grid.RowSpan="3" Grid.ColumnSpan="2"  IsVisible="{Binding Source={x:Reference QuestionImage}, Path=!IsLoading}"></BoxView>-->
+
+            <!--<Image x:Name="QuestionImage" Grid.RowSpan="3" Grid.ColumnSpan="2" Aspect="AspectFill"></Image>-->
+
+
+
+
+            <ffimageloading:CachedImage Grid.RowSpan="4" Grid.ColumnSpan="2" Aspect="AspectFill" x:Name="QuestionImage"
+			DownsampleToViewSize="False" FadeAnimationEnabled="True" FadeAnimationDuration="1000" FadeAnimationForCachedImages="True" CacheDuration="30"
+			>
+            </ffimageloading:CachedImage>
+
+
+            <BoxView x:Name="QuestionLabelBox" Grid.RowSpan="3" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="Center" ></BoxView>
+            <Label x:Name="QuestionLabel" Grid.RowSpan="3" Grid.ColumnSpan="2"  FontSize="32"
+                   VerticalOptions="Center" HorizontalOptions="Center" Margin="0, 0, 0, 5" ></Label>
+
+
+
+
+            <!--top-->
+            <!--<BoxView x:Name="QuestionLabelBox" Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="Center" ></BoxView>
+            <Label x:Name="QuestionLabel" Grid.Row="0" Grid.ColumnSpan="2"  FontSize="32"
+                   VerticalOptions="Center" HorizontalOptions="Center" Margin="0, 0, 0, 5" ></Label>-->
+
+            <Label x:Name="TimerLabel" Grid.Row="0" Grid.ColumnSpan="2"  FontSize="Medium"
+                   VerticalOptions="Start" HorizontalOptions="EndAndExpand" Margin="0, 10, 10, 0"  IsVisible="False"></Label>
+
+            <BoxView x:Name="CorrectFlash" Grid.RowSpan="4" Grid.ColumnSpan="2" Color="#50c878" Opacity="0" ></BoxView>
+            <BoxView x:Name="SkipFlash" Grid.RowSpan="4" Grid.ColumnSpan="2" Color="#ff0033" Opacity="0" ></BoxView>
+
+            <Label x:Name="CountingLabel" Grid.RowSpan="4" Grid.ColumnSpan="2"  FontSize="72" TextColor="Gold"
+                   VerticalOptions="Center" HorizontalOptions="Center" ></Label>
+
+            <Button x:Name="CorrectButton" Grid.Row="2" Grid.RowSpan="2" Grid.Column="0" Clicked="Correct_Button_Clicked" Margin="30, 0, 30, 0" Opacity="0.9"></Button>
+            <Button x:Name="SkipButton" Grid.Row="2" Grid.RowSpan="2" Grid.Column="1" Clicked="Skip_Button_Clicked" Margin="30, 0, 30, 0" Opacity="0.9"></Button>
+
+
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -1,12 +1,75 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ArTai.Settings">
+             x:Class="ArTai.Settings"
+             Title="Nustatymai"
+             BackgroundColor="Black">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+
+            </Grid.RowDefinitions>
+            <Image Opacity="0.2" Aspect="AspectFill" Grid.Row="0" Grid.Column="0" Source="Net.jpg"></Image>
+            <TableView Margin="20" Grid.Row="0" Grid.Column="0" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center">
+                <TableRoot>
+
+                    <TableSection>
+                        <ViewCell>
+                            <!--                                                    Alpha on RGB background color-->
+                            <StackLayout Orientation="Horizontal" Margin="10, 0, 5, 0" BackgroundColor=" #772F4F4F "  >
+                                <Label x:Name="QuestionStepperLabel" VerticalOptions="Center" HorizontalOptions="Start" Margin="5, 0, 0, 0" FontSize="Medium"></Label>
+                                <Stepper x:Name="Questiontepper" Increment="10" Maximum="50" Minimum="10"
+                                     VerticalOptions="Center" HorizontalOptions="EndAndExpand" ValueChanged="Questiontepper_ValueChanged" >
+                                </Stepper>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection>
+                        <ViewCell>
+                            <!--                                                    Alpha on RGB background color-->
+                            <StackLayout Orientation="Horizontal" Margin="10, 0, 5, 0" BackgroundColor=" #772F4F4F " >
+                                <!--<Switch x:Name="TimeSwitch" Toggled="SwitchCell_OnChanged" VerticalOptions="Center"></Switch>-->
+                                <Label x:Name="TimeStepperLabel" VerticalOptions="Center" HorizontalOptions="Start" Margin="5, 0, 0, 0" FontSize="Medium"></Label>
+                                <Stepper x:Name="TimeStepper" Increment="30" Maximum="210" Minimum="30"
+                                     VerticalOptions="Center" HorizontalOptions="EndAndExpand" ValueChanged="TimeStepper_ValueChanged" >
+                                </Stepper>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection>
+                        <ViewCell>
+                            <!--                                                    Alpha on RGB background color-->
+                            <StackLayout Orientation="Horizontal" Margin="10, 0, 5, 0" BackgroundColor=" #772F4F4F " >
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+                                <Label x:Name="LanguagePickerLabel" Text="Kalba" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Margin="5, 0, 0, 0" FontSize="Medium"></Label>
+                                <Picker x:Name="LanguagePicker" SelectedIndexChanged="LanguagePicker_SelectedIndexChanged" 
+                                       VerticalOptions="Center" HorizontalOptions="Center">
+                                    <Picker.Items>
+                                        <x:String>English</x:String>
+                                        <x:String>Lietuvių</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                    <TableSection>
+                        <ViewCell>
+                            <!--                                                    Alpha on RGB background color-->
+                            <StackLayout Orientation="Horizontal" Margin="10, 0, 5, 0" BackgroundColor=" #772F4F4F " >
+                                <!--<Switch x:Name="TimeSwitch" Toggled="SwitchCell_OnChanged" VerticalOptions="Center"></Switch>-->
+                                <Label x:Name="DownloadLabel" VerticalOptions="Center" HorizontalOptions="Start" Margin="5, 0, 0, 0" FontSize="Medium"></Label>
+                                <Switch x:Name="DownloadSwitch"
+                                     VerticalOptions="Center" HorizontalOptions="EndAndExpand" Toggled="DownloadSwitch_Toggled" >
+                                </Switch>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
-using Plugin.SimpleAudioPlayer.Abstractions;
+//using Plugin.SimpleAudioPlayer.Abstractions;
 
 namespace ArTai
 {
@@ -41,7 +41,7 @@ namespace ArTai
         {
             var assembly = typeof(App).GetTypeInfo().Assembly;
 
-            var stream = assembly.GetManifestResourceStream("IsThis.Sounds." + filename);
+            var stream = assembly.GetManifestResourceStream("ArTai.Sounds." + filename);
 
             return stream;
         }
@@ -66,7 +66,7 @@ namespace ArTai
         {
             var assembly = typeof(App).GetTypeInfo().Assembly;
 
-            var stream = assembly.GetManifestResourceStream("IsThis.Sounds." + filename);
+            var stream = assembly.GetManifestResourceStream("ArTai.Sounds." + filename);
 
             return stream;
         }
@@ -92,7 +92,7 @@ namespace ArTai
         {
             var assembly = typeof(App).GetTypeInfo().Assembly;
 
-            var stream = assembly.GetManifestResourceStream("IsThis.Sounds." + filename);
+            var stream = assembly.GetManifestResourceStream("ArTai.Sounds." + filename);
 
             return stream;
         }
@@ -119,7 +119,7 @@ namespace ArTai
         {
             var assembly = typeof(App).GetTypeInfo().Assembly;
 
-            var stream = assembly.GetManifestResourceStream("IsThis.Sounds." + filename);
+            var stream = assembly.GetManifestResourceStream("ArTai.Sounds." + filename);
 
             return stream;
         }
@@ -145,7 +145,7 @@ namespace ArTai
         {
             var assembly = typeof(App).GetTypeInfo().Assembly;
 
-            var stream = assembly.GetManifestResourceStream("IsThis.Sounds." + filename);
+            var stream = assembly.GetManifestResourceStream("ArTai.Sounds." + filename);
 
             return stream;
         }
@@ -171,7 +171,7 @@ namespace ArTai
         {
             var assembly = typeof(App).GetTypeInfo().Assembly;
 
-            var stream = assembly.GetManifestResourceStream("IsThis.Sounds." + filename);
+            var stream = assembly.GetManifestResourceStream("ArTai.Sounds." + filename);
 
             return stream;
         }
@@ -197,7 +197,7 @@ namespace ArTai
         {
             var assembly = typeof(App).GetTypeInfo().Assembly;
 
-            var stream = assembly.GetManifestResourceStream("IsThis.Sounds." + filename);
+            var stream = assembly.GetManifestResourceStream("ArTai.Sounds." + filename);
 
             return stream;
         }
