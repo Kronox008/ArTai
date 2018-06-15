@@ -19,7 +19,7 @@
                 </Grid.RowDefinitions>
 
                 <Button x:Name="SettingsButton" Grid.Row="0" Grid.Column="0" Clicked="SettingsButton_Clicked" BorderRadius="80" ></Button>
-                <Button x:Name="InfoButton" Text="Kaip žaisti?" Grid.Row="0" Grid.Column="1" Clicked="InfoButton_Clicked"></Button>
+                <Button x:Name="InfoButton" Text="Kaip žaisti?" Grid.Row="0" Grid.Column="1" Clicked="InfoButton_Clicked" BorderRadius="80"></Button>
 
                 <Image  Grid.Row="1" Grid.Column="0" Source="GOT.jpg" Aspect="AspectFill"></Image>
                 <Button x:Name="myGOT" Grid.Row="1" Grid.Column="0" Opacity="0" Clicked="myGOT_Clicked" ></Button>

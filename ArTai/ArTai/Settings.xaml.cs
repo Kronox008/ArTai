@@ -85,7 +85,7 @@ namespace ArTai
 
 
         //Time stepper---------------------------------------------------------------------------
-        private async void TimeStepper_ValueChanged(object sender, ValueChangedEventArgs e)
+        private void TimeStepper_ValueChanged(object sender, ValueChangedEventArgs e)
         {
             Global.CountDownTime = Convert.ToInt32(TimeStepper.Value);
             if (Global.CountDownTime <= 180)
@@ -96,45 +96,22 @@ namespace ArTai
             {
                 TimeStepperLabel.Text = "∞ sec";
             }
-            ///////////////////////////////////////////////////////////////////////////////////////////////Saving to DB
-            var Save_TO_DB = new GameSelectionPage.Saved_Settings()
-            {
-                StaticId = 1,
-                Saved_Quantity = Global.QuestionQuantity,
-                Saved_Time = Global.CountDownTime,
-                LanguageId = Global.LanguageSelectedID,
-                DownloadImages = Global.DownloadImages,
 
-
-            };
-
-            _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
-            await _connection.InsertOrReplaceAsync(Save_TO_DB);
+            SaveToDB();
 
         }
         //Question stepper--------------------------------------------------------------------------
-        private async void Questiontepper_ValueChanged(object sender, ValueChangedEventArgs e)
+        private void Questiontepper_ValueChanged(object sender, ValueChangedEventArgs e)
         {
             Global.QuestionQuantity = Convert.ToInt32(Questiontepper.Value);
             QuestionStepperLabel.Text = String.Format("{0} {1}", Global.QuestionQuantity, Global.QuestionslabelText);
 
-            ///////////////////////////////////////////////////////////////////////////////////////////////Saving to DB
-            var Save_TO_DB = new GameSelectionPage.Saved_Settings()
-            {
-                StaticId = 1,
-                Saved_Quantity = Global.QuestionQuantity,
-                Saved_Time = Global.CountDownTime,
-                LanguageId = Global.LanguageSelectedID,
-                DownloadImages = Global.DownloadImages,
-
-            };
-            _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
-            await _connection.InsertOrReplaceAsync(Save_TO_DB);
+            SaveToDB();
         }
 
 
 
-        private async void LanguagePicker_SelectedIndexChanged(object sender, EventArgs e)
+        private void LanguagePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             Global.LanguagePickerIndex = LanguagePicker.SelectedIndex;
             if (LanguagePicker.SelectedIndex == 0)
@@ -150,18 +127,7 @@ namespace ArTai
                 SetFields();
             }
 
-            ///////////////////////////////////////////////////////////////////////////////////////////////Saving to DB
-            var Save_TO_DB = new GameSelectionPage.Saved_Settings()
-            {
-                StaticId = 1,
-                Saved_Quantity = Global.QuestionQuantity,
-                Saved_Time = Global.CountDownTime,
-                LanguageId = Global.LanguageSelectedID,
-                DownloadImages = Global.DownloadImages,
-
-            };
-            _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
-            await _connection.InsertOrReplaceAsync(Save_TO_DB);
+            SaveToDB();
 
         }
 
@@ -170,10 +136,13 @@ namespace ArTai
             LanguagePicker.Focus();
         }
 
-        private async void DownloadSwitch_Toggled(object sender, ToggledEventArgs e)
+        private void DownloadSwitch_Toggled(object sender, ToggledEventArgs e)
         {
             Global.DownloadImages = DownloadSwitch.IsToggled;
-
+            SaveToDB();
+        }
+        private async void SaveToDB()
+        {
             ///////////////////////////////////////////////////////////////////////////////////////////////Saving to DB
             var Save_TO_DB = new GameSelectionPage.Saved_Settings()
             {

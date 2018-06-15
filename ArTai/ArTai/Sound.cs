@@ -12,6 +12,9 @@ namespace ArTai
 {
     public class Sound
     {
+
+        ISimpleAudioPlayer allSounds;
+
         ISimpleAudioPlayer CorrectSoundPlayer;
         ISimpleAudioPlayer SkipSoundPlayer;
         ISimpleAudioPlayer TickSoundPlayer;
@@ -19,8 +22,7 @@ namespace ArTai
         ISimpleAudioPlayer SettingsSoundPlayer;
         ISimpleAudioPlayer SettingsClosingSoundPlayer;
         ISimpleAudioPlayer PlayGameSoundPlayer;
-        //ISimpleAudioPlayer GOT_Theme0;
-        //ISimpleAudioPlayer GOT_Theme1;
+
         private static double MasterVolume = Global.SoundVolume;
         public void CorrectSoundStream()
         {
@@ -201,79 +203,268 @@ namespace ArTai
 
             return stream;
         }
+        //_------------------------------------------------------------------fixed___---------------------------------------------------------
+        
+        public void StopSounds()
+        {
+            if (allSounds.IsPlaying)
+            {
+                allSounds.Stop();
+            }
+        }
+        public void GOTsounds()
+        {
+            System.Random RandomNumber = new System.Random();
+
+            string soundName0 = "got_s1e5_pays_his_debts.wav";
+            string soundName1 = "got_s1e7_win_or_die.wav";
+            string soundPath  = "ArTai.Sounds.GOT.";
+           
+            allSounds = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+
+            int soundNumber = RandomNumber.Next(0, 2);         // 2-1 = total streams
+
+
+            switch (soundNumber)
+            {
+                case 0:
+                    var GOT0 = GetStream(soundPath, soundName0);
+                    allSounds.Load(GOT0);
+                    break;
+                case 1:
+                    var GOT1 = GetStream(soundPath, soundName1);
+                    allSounds.Load(GOT1);
+                    break;
+                default:
+                    break;
+            }
+
+            allSounds.Volume = Global.SoundVolume;
+            allSounds.Play();
+            
+        }
+        public void LoTRsounds()
+        {
+            System.Random RandomNumber = new System.Random();
+
+            string soundName0 = "death.wav";
+            string soundName1 = "king.wav";
+            string soundName2 = "reddawn.wav";
+            string soundName3 = "reddawn.wav";
+            string soundName4 = "shallnotpass.wav";
+            string soundName5 = "task.wav";
+            string soundName6 = "tried.wav";
+            string soundPath  = "ArTai.Sounds.LoTR.";
+
+           
+            allSounds = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+
+            int soundNumber = RandomNumber.Next(0, 7);         // 2-1 = total streams
+            
+
+            switch (soundNumber)
+            {
+                case 0:
+                    var LoTR0 = GetStream(soundPath, soundName0);
+                    allSounds.Load(LoTR0);
+                    break;
+                case 1:
+                    var LoTR1 = GetStream(soundPath, soundName1);
+                    allSounds.Load(LoTR1);
+                    break;
+                case 2:
+                    var LoTR2 = GetStream(soundPath, soundName2);
+                    allSounds.Load(LoTR2);
+                    break;
+                case 3:
+                    var LoTR3 = GetStream(soundPath, soundName3);
+                    allSounds.Load(LoTR3);
+                    break;
+                case 4:
+                    var LoTR4 = GetStream(soundPath, soundName4);
+                    allSounds.Load(LoTR4);
+                    break;
+                case 5:
+                    var LoTR5 = GetStream(soundPath, soundName5);
+                    allSounds.Load(LoTR5);
+                    break;
+                case 6:
+                    var LoTR6 = GetStream(soundPath, soundName6);
+                    allSounds.Load(LoTR6);
+                    break;
+                default:
+                    break;
+            }
+            
+            allSounds.Volume = Global.SoundVolume;
+            allSounds.Play();
+        }
+        public void HPsounds()
+        {
+            System.Random RandomNumber = new System.Random();
+
+            string soundName0 = "avadakedavra.wav";
+            string soundName1 = "lumosmaxima.wav";
+            string soundName2 = "require.wav";
+            string soundPath  = "ArTai.Sounds.HP.";
+
+            allSounds = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+
+            int soundNumber = RandomNumber.Next(0, 3);         // 2-1 = total streams
+
+
+            switch (soundNumber)
+            {
+                case 0:
+                    var HP0 = GetStream(soundPath, soundName0);
+                    allSounds.Load(HP0);
+                    break;
+                case 1:
+                    var HP1 = GetStream(soundPath, soundName1);
+                    allSounds.Load(HP1);
+                    break;
+                case 2:
+                    var HP2 = GetStream(soundPath, soundName2);
+                    allSounds.Load(HP2);
+                    break;
+                default:
+                    break;
+            }
+
+            allSounds.Volume = Global.SoundVolume;
+            allSounds.Play();
+
+        }
+        public void Friendssounds()
+        {
+            System.Random RandomNumber = new System.Random();
+
+            string soundName0 = "couldie.wav";
+            string soundName1 = "howdoing.wav";
+            string soundName2 = "ripped.wav";
+            string soundName3 = "secrets.wav";
+            string soundName4 = "smellyct.wav";
+            string soundPath  = "ArTai.Sounds.friends.";
+
+            allSounds = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+
+            int soundNumber = RandomNumber.Next(0, 5);         // 2-1 = total streams
+
+
+            switch (soundNumber)
+            {
+                case 0:
+                    var FRIENDS0 = GetStream(soundPath, soundName0);
+                    allSounds.Load(FRIENDS0);
+                    break;
+                case 1:
+                    var FRIENDS1 = GetStream(soundPath, soundName1);
+                    allSounds.Load(FRIENDS1);
+                    break;
+                case 2:
+                    var FRIENDS2 = GetStream(soundPath, soundName2);
+                    allSounds.Load(FRIENDS2);
+                    break;
+                case 3:
+                    var FRIENDS3 = GetStream(soundPath, soundName3);
+                    allSounds.Load(FRIENDS3);
+                    break;
+                case 4:
+                    var FRIENDS4 = GetStream(soundPath, soundName4);
+                    allSounds.Load(FRIENDS4);
+                    break;
+                default:
+                    break;
+            }
+
+            allSounds.Volume = Global.SoundVolume;
+            allSounds.Play();
+
+        }
+        public void Animalssounds()
+        {
+            System.Random RandomNumber = new System.Random();
+
+            string soundName0 = "Narwhals.wav";
+            string soundPath  = "ArTai.Sounds.Animals.";
+
+            allSounds = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+
+            int soundNumber = 0;         // 2-1 = total streams
+
+
+            switch (soundNumber)
+            {
+                case 0:
+                    var ANIMALS0 = GetStream(soundPath, soundName0);
+                    allSounds.Load(ANIMALS0);
+                    break;
+                default:
+                    break;
+            }
+
+            allSounds.Volume = Global.SoundVolume;
+            allSounds.Play();
+
+        }
+        public void Mythsounds()
+        {
+            System.Random RandomNumber = new System.Random();
+
+            string soundName0 = "arkantosarrive.wav";
+            string soundName1 = "godpower.wav";
+            string soundName2 = "xsentinelbirth.wav";
+            string soundName3 = "xwin.wav";
+            string soundPath = "ArTai.Sounds.HP.";
+
+            allSounds = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+
+            int soundNumber = RandomNumber.Next(0, 4);         // 2-1 = total streams
+
+
+            switch (soundNumber)
+            {
+                case 0:
+                    var MYTH0 = GetStream(soundPath, soundName0);
+                    allSounds.Load(MYTH0);
+                    break;
+                case 1:
+                    var MYTH1 = GetStream(soundPath, soundName1);
+                    allSounds.Load(MYTH1);
+                    break;
+                case 2:
+                    var MYTH2 = GetStream(soundPath, soundName2);
+                    allSounds.Load(MYTH2);
+                    break;
+                case 3:
+                    var MYTH3 = GetStream(soundPath, soundName3);
+                    allSounds.Load(MYTH3);
+                    break;
+                default:
+                    break;
+            }
+
+            allSounds.Volume = Global.SoundVolume;
+            allSounds.Play();
+
+        }
+
+
+        private Stream GetStream(string soundPath, string soundName)
+        {
+            var powerStream = GetTheOneStream(soundPath, soundName);
+
+            Stream GetTheOneStream(string filename, string soundname)
+            {
+                var assembly = typeof(App).GetTypeInfo().Assembly;
+
+                var stream = assembly.GetManifestResourceStream(soundPath + soundname);
+
+                return stream;
+            }
+            
+            return (powerStream);
+        }
+        
     }
 }
-//-------------------------------------------------------------------------------------------------------------------------
-////-------------------------------Theme sound start------------------------------------------------------------------------------------------
-
-//public void ThemeSoundPlay( int SelectedDeckNumber)
-//{
-
-//    switch (SelectedDeckNumber)  
-//    {
-
-//        case 1:
-//            var stream0 = GetStreamFromGOT_Theme0File("got_s1e5_pays_his_debts.wav");
-//            GOT_Theme0 = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();        //Load selected deck theme sounds
-//            GOT_Theme0.Load(stream0);
-
-//            var stream1 = GetStreamFromGOT_Theme1File("got_s1e7_win_or_die.wav");
-//            GOT_Theme1 = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-//            GOT_Theme1.Load(stream1);
-
-//                Stream GetStreamFromGOT_Theme0File(string filename)
-//                {
-//                    var assembly = typeof(App).GetTypeInfo().Assembly;
-
-//                    var stream = assembly.GetManifestResourceStream("IsThis.Sounds.GOT." + filename);
-
-//                    return stream;
-//                }
-//                Stream GetStreamFromGOT_Theme1File(string filename)
-//                {
-//                    var assembly = typeof(App).GetTypeInfo().Assembly;
-
-//                    var stream = assembly.GetManifestResourceStream("IsThis.Sounds.GOT." + filename);
-
-//                    return stream;
-//                }
-
-
-
-//                System.Random RandomNumber = new System.Random();  //Generating random number for selected deck (to choose specific 
-//                int playthisNow = RandomNumber.Next(0, 2);         // 2-1 = total streams
-
-
-
-
-//            switch (playthisNow)                              //Playing random theme sound form selected deck
-//            {
-//                case 0:
-//                    GOT_Theme0.Volume = Global.ThemeSoundVolume;
-//                    GOT_Theme0.Play();
-
-
-//                    break;
-//                case 1:
-//                    GOT_Theme1.Volume = Global.ThemeSoundVolume;
-//                    GOT_Theme1.Play();
-
-//                    break;
-//                default:
-//                    break;
-//            }
-//            break;
-//        default:
-//            break;
-//    }
-//    }
-
-
-//}
-////-------------------------------------Theme sounds end------------------------------------------------------------------------------------
-
-
-
-
-//}
-
