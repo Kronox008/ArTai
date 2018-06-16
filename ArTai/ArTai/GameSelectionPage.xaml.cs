@@ -88,8 +88,20 @@ namespace ArTai
             enableButtons();
             setLanguage();
 
+            MessagingCenter.Send(this, Global.LanguageSelectedID.ToString()); //set double tap to exit toaster message language
+            MessagingCenter.Send(this, "CanExit"); //enable double tap to exit
 
             base.OnAppearing();
+
+            
+        }
+
+        protected override void OnDisappearing()
+        {
+            MessagingCenter.Send(this, "NoExit"); //disable double tap to exit
+
+            base.OnDisappearing();
+            
         }
 
         private async void myGOT_Clicked(object sender, EventArgs e)

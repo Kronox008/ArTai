@@ -22,9 +22,33 @@ namespace ArTai.Droid
 
 
         public static bool Volumeoff { get; set; }
+        public static string ToastMessage { get; set; }
+        public static bool CanExit { get; set; } = false;
+
         protected override void OnCreate(Bundle bundle)
 
         {
+            MessagingCenter.Subscribe<GameSelectionPage>(this, "0", sender =>   // 0 - english language, setting toast message on double tap to exit
+            {
+                ToastMessage = "Tap back button again to exit.";
+                
+            });
+            MessagingCenter.Subscribe<GameSelectionPage>(this, "1", sender =>   // 0 - english language, setting toast message on double tap to exit
+            {
+                ToastMessage = "Paspauskite Atgal dar kartą norint išeiti.";
+
+            });
+            MessagingCenter.Subscribe<GameSelectionPage>(this, "CanExit", sender =>
+            {
+                CanExit = true;
+
+            });
+            MessagingCenter.Subscribe<GameSelectionPage>(this, "NoExit", sender =>
+            {
+                CanExit = false;
+
+            });
+
             FFImageLoading.Forms.Droid.CachedImageRenderer.Init(enableFastRenderer: true);
             //allowing the device to change the screen orientation based on the rotation
             MessagingCenter.Subscribe<GameplayPage>(this, "forceLandScapePortrait", sender =>
@@ -112,10 +136,38 @@ namespace ArTai.Droid
             return base.OnKeyDown(keyCode, e);
         }
 
+        bool doubleBackToExitPressedOnce = false;    //to detect Double tap Back button
+        public override void OnBackPressed()
+        {
+            if(CanExit)
+            {
+                if (doubleBackToExitPressedOnce)
+                {
+                    base.OnBackPressed();
+                    Java.Lang.JavaSystem.Exit(0);
+                    return;
+                }
 
+
+                this.doubleBackToExitPressedOnce = true;
+                Toast.MakeText(this, ToastMessage, ToastLength.Short).Show();
+
+                new Handler().PostDelayed(() =>
+                {
+                    doubleBackToExitPressedOnce = false;
+                }, 2000);
+            }
+            else
+            {
+                base.OnBackPressed();
+            }
+
+
+
+
+        }
 
     }
-
 }
 
 
