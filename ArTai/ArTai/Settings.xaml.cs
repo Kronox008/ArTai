@@ -11,6 +11,7 @@ namespace ArTai
     public partial class Settings : ContentPage
     {
         private SQLiteAsyncConnection _connection;
+        Sound allSounds = new Sound();
 
         //public class Saved_Settings
         //{
@@ -32,21 +33,12 @@ namespace ArTai
 
         protected override void OnAppearing()
         {
-            Sound make_settings_sound = new Sound();
-            make_settings_sound.SettingsSoundStream();
-            make_settings_sound.SettingsSoundPlay();
-
-
-
-
+            allSounds.OpenSettingssound();
             base.OnAppearing();
         }
         protected override void OnDisappearing()
         {
-            Sound make_closing_sound = new Sound();
-            make_closing_sound.SettingsClosingSoundStream();
-            make_closing_sound.SettingsCloseSoundPlay();
-
+            allSounds.CloseSettingssound();
 
             base.OnDisappearing();
         }

@@ -13,6 +13,8 @@ namespace ArTai
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AfterGamePage : ContentPage
     {
+        Sound allSounds = new Sound();
+
         public AfterGamePage()
         {
             InitializeComponent();
@@ -48,10 +50,7 @@ namespace ArTai
         }
         protected override void OnAppearing()
         {
-            Sound make_score_sound = new Sound();
-            make_score_sound.ScoreSoundStream();
-            make_score_sound.ScoreSoundPlay();
-
+            allSounds.Scoressound();
 
             base.OnAppearing();
         }

@@ -15,196 +15,7 @@ namespace ArTai
 
         ISimpleAudioPlayer allSounds;
 
-        ISimpleAudioPlayer CorrectSoundPlayer;
-        ISimpleAudioPlayer SkipSoundPlayer;
-        ISimpleAudioPlayer TickSoundPlayer;
-        ISimpleAudioPlayer ScoreSoundPlayer;
-        ISimpleAudioPlayer SettingsSoundPlayer;
-        ISimpleAudioPlayer SettingsClosingSoundPlayer;
-        ISimpleAudioPlayer PlayGameSoundPlayer;
-
-        private static double MasterVolume = Global.SoundVolume;
-        public void CorrectSoundStream()
-        {
-            var stream = GetStreamFromCorrectFile("conjure_item.mp3");
-            CorrectSoundPlayer = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-            CorrectSoundPlayer.Load(stream);
-
-
-        }
-        public void CorrectSoundPlay()
-        {
-            CorrectSoundPlayer.Volume = MasterVolume;
-            CorrectSoundPlayer.Play();
-        }
-
-
-        Stream GetStreamFromCorrectFile(string filename)
-        {
-            var assembly = typeof(App).GetTypeInfo().Assembly;
-
-            var stream = assembly.GetManifestResourceStream("ArTai.Sounds." + filename);
-
-            return stream;
-        }
-        //-------------------------------------------------------------------------------------------------------------------------
-
-        public void SkipSoundStream()
-        {
-            var stream = GetStreamFromSkipFile("igplayerinvitedecline.mp3");
-            SkipSoundPlayer = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-            SkipSoundPlayer.Load(stream);
-
-
-        }
-        public void SkipSoundPlay()
-        {
-            SkipSoundPlayer.Volume = MasterVolume;
-            SkipSoundPlayer.Play();
-        }
-
-
-        Stream GetStreamFromSkipFile(string filename)
-        {
-            var assembly = typeof(App).GetTypeInfo().Assembly;
-
-            var stream = assembly.GetManifestResourceStream("ArTai.Sounds." + filename);
-
-            return stream;
-        }
-        //-------------------------------------------------------------------------------------------------------------------------
-        public void TickSoundStream()
-        {
-            var stream = GetStreamFromTickFile("dot.mp3");
-            TickSoundPlayer = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-            TickSoundPlayer.Load(stream);
-
-
-        }
-        public void TickSoundPlay()
-        {
-            TickSoundPlayer.Volume = MasterVolume;
-            TickSoundPlayer.Play();
-
-        }
-
-
-
-        Stream GetStreamFromTickFile(string filename)
-        {
-            var assembly = typeof(App).GetTypeInfo().Assembly;
-
-            var stream = assembly.GetManifestResourceStream("ArTai.Sounds." + filename);
-
-            return stream;
-        }
-        //-------------------------------------------------------------------------------------------------------------------------
-
-        public void ScoreSoundStream()
-        {
-            var stream = GetStreamFromScoreFile("lvlUP.mp3");
-            ScoreSoundPlayer = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-            ScoreSoundPlayer.Load(stream);
-
-
-        }
-        public void ScoreSoundPlay()
-        {
-            ScoreSoundPlayer.Volume = MasterVolume;
-            ScoreSoundPlayer.Play();
-
-        }
-
-
-
-        Stream GetStreamFromScoreFile(string filename)
-        {
-            var assembly = typeof(App).GetTypeInfo().Assembly;
-
-            var stream = assembly.GetManifestResourceStream("ArTai.Sounds." + filename);
-
-            return stream;
-        }
-        //-------------------------------------------------------------------------------------------------------------------------
-        public void SettingsSoundStream()
-        {
-            var stream = GetStreamFromSettingsFile("chestOPEN.mp3");
-            SettingsSoundPlayer = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-            SettingsSoundPlayer.Load(stream);
-
-
-        }
-        public void SettingsSoundPlay()
-        {
-            SettingsSoundPlayer.Volume = MasterVolume;
-            SettingsSoundPlayer.Play();
-
-        }
-
-
-
-        Stream GetStreamFromSettingsFile(string filename)
-        {
-            var assembly = typeof(App).GetTypeInfo().Assembly;
-
-            var stream = assembly.GetManifestResourceStream("ArTai.Sounds." + filename);
-
-            return stream;
-        }
-        //-------------------------------------------------------------------------------------------------------------------------
-        public void SettingsClosingSoundStream()
-        {
-            var stream = GetStreamFromSettingsCloseFile("draenei_chest_anims_close.mp3");
-            SettingsClosingSoundPlayer = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-            SettingsClosingSoundPlayer.Load(stream);
-
-
-        }
-        public void SettingsCloseSoundPlay()
-        {
-            SettingsClosingSoundPlayer.Volume = MasterVolume;
-            SettingsClosingSoundPlayer.Play();
-
-        }
-
-
-
-        Stream GetStreamFromSettingsCloseFile(string filename)
-        {
-            var assembly = typeof(App).GetTypeInfo().Assembly;
-
-            var stream = assembly.GetManifestResourceStream("ArTai.Sounds." + filename);
-
-            return stream;
-        }
-        //-------------------------------------------------------------------------------------------------------------------------
-        public void PlayTheGameSoundStream()
-        {
-            var stream = GetStreamFromPlayTheGameSoundFile("glueenterworldbutton.mp3");
-            PlayGameSoundPlayer = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
-            PlayGameSoundPlayer.Load(stream);
-
-
-        }
-        public void PlayTheGameSoundPlay()
-        {
-            PlayGameSoundPlayer.Volume = MasterVolume;
-            PlayGameSoundPlayer.Play();
-
-        }
-
-
-
-        Stream GetStreamFromPlayTheGameSoundFile(string filename)
-        {
-            var assembly = typeof(App).GetTypeInfo().Assembly;
-
-            var stream = assembly.GetManifestResourceStream("ArTai.Sounds." + filename);
-
-            return stream;
-        }
-        //_------------------------------------------------------------------fixed___---------------------------------------------------------
-        
+        // Theme Sounds start
         public void StopSounds()
         {
             if (allSounds.IsPlaying)
@@ -443,7 +254,114 @@ namespace ArTai
             allSounds.Play();
 
         }
+        // Theme Sounds end
 
+        //GamePLay Sounds start
+        public void StartGamesound()
+        {
+            string soundName0 = "glueenterworldbutton.mp3";
+            string soundPath  = "ArTai.Sounds.";
+
+            allSounds = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+
+            var StartGame = GetStream(soundPath, soundName0);
+            allSounds.Load(StartGame); 
+
+            allSounds.Volume = Global.SoundVolume;
+            allSounds.Play();
+
+        }
+        public void Correctsound()
+        {
+            string soundName0 = "conjure_item.mp3";
+            string soundPath = "ArTai.Sounds.";
+
+            allSounds = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+
+            var Correct = GetStream(soundPath, soundName0);
+            allSounds.Load(Correct); 
+
+            allSounds.Volume = Global.SoundVolume;
+            allSounds.Play();
+
+        }
+        public void Skipsound()
+        {
+            string soundName0 = "igplayerinvitedecline.mp3";
+            string soundPath = "ArTai.Sounds.";
+
+            allSounds = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+
+            var Skip = GetStream(soundPath, soundName0);
+            allSounds.Load(Skip);
+
+            allSounds.Volume = Global.SoundVolume;
+            allSounds.Play();
+
+        }
+        public void Ticksound()
+        {
+            string soundName0 = "dot.mp3";
+            string soundPath = "ArTai.Sounds.";
+
+            allSounds = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+
+            var Tick = GetStream(soundPath, soundName0);
+            allSounds.Load(Tick);
+
+            allSounds.Volume = Global.SoundVolume;
+            allSounds.Play();
+
+        }
+        //GamePlay Sounds end
+
+        //Settings Sounds start
+        public void OpenSettingssound()
+        {
+            string soundName0 = "chestOPEN.mp3";
+            string soundPath = "ArTai.Sounds.";
+
+            allSounds = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+
+            var OpenSettings = GetStream(soundPath, soundName0);
+            allSounds.Load(OpenSettings);
+
+            allSounds.Volume = Global.SoundVolume;
+            allSounds.Play();
+
+        }
+        public void CloseSettingssound()
+        {
+            string soundName0 = "draenei_chest_anims_close.mp3";
+            string soundPath = "ArTai.Sounds.";
+
+            allSounds = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+
+            var CloseSettings = GetStream(soundPath, soundName0);
+            allSounds.Load(CloseSettings);
+
+            allSounds.Volume = Global.SoundVolume;
+            allSounds.Play();
+
+        }
+        //Settings Sounds end
+
+        //Score Screen Sounds start
+        public void Scoressound()
+        {
+            string soundName0 = "lvlUP.mp3";
+            string soundPath = "ArTai.Sounds.";
+
+            allSounds = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+
+            var Score = GetStream(soundPath, soundName0);
+            allSounds.Load(Score);
+
+            allSounds.Volume = Global.SoundVolume;
+            allSounds.Play();
+
+        }
+        //Score Screen Sounds end
 
         private Stream GetStream(string soundPath, string soundName)
         {

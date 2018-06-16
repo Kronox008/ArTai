@@ -1,4 +1,3 @@
-C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\ArTai.csprojAssemblyReference.cache
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\AfterGamePage.xaml.g.cs
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\GameplayPage.xaml.g.cs

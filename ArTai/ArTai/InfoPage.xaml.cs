@@ -12,6 +12,8 @@ namespace ArTai
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class InfoPage : ContentPage
     {
+        Sound allSounds = new Sound();
+
         public InfoPage()
         {
             InitializeComponent();
@@ -30,18 +32,15 @@ namespace ArTai
         }
         protected override void OnAppearing()
         {
-            Sound make_settings_sound = new Sound();
-            make_settings_sound.SettingsSoundStream();
-            make_settings_sound.SettingsSoundPlay();
+            allSounds.OpenSettingssound();
 
             base.OnAppearing();
         }
         protected override void OnDisappearing()
 
         {
-            Sound make_closing_sound = new Sound();
-            make_closing_sound.SettingsClosingSoundStream();
-            make_closing_sound.SettingsCloseSoundPlay();
+            allSounds.CloseSettingssound();
+
             base.OnDisappearing();
         }
 

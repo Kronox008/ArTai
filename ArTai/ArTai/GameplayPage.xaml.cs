@@ -14,9 +14,7 @@ namespace ArTai
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GameplayPage : ContentPage
     {
-        Sound Make_some_Correct_sounds = new Sound();
-        Sound Make_some_Skip_sounds = new Sound();
-        Sound Make_some_Tick_sounds = new Sound();
+        Sound allSounds = new Sound();
 
         int i = 0;
 
@@ -40,6 +38,7 @@ namespace ArTai
             base.OnAppearing();
             MessagingCenter.Send(this, "forceLandScapePortrait"); //set sensor-landscape orientation
             MessagingCenter.Send(this, "VolumeButtonOFF");
+            allSounds.StartGamesound();
 
         }
         protected override void OnDisappearing()
@@ -68,11 +67,7 @@ namespace ArTai
             QuestionLabel.TextColor = Color.FromHex(Global.ButtonTextWhiteColor);
             CountingLabel.TextColor = Color.FromHex(Global.TimersColors);
             TimerLabel.TextColor = Color.FromHex(Global.TimersColors);
-
-
-
-            Make_some_Tick_sounds.TickSoundStream();
-
+            
             uint duration = 1000;
 
             QuestionImage.IsVisible = false;
@@ -93,15 +88,12 @@ namespace ArTai
             CountingLabel.Text = "1";
             await CountingLabel.RotateTo(1083, duration, Easing.SinInOut);
 
-            Make_some_Tick_sounds.TickSoundPlay();     /////////////////////// Sound
+            allSounds.Ticksound();     /////////////////////// Sound
 
             PlayTimeNow();
         }
         private void PlayTimeNow()
         {
-            Make_some_Correct_sounds.CorrectSoundStream();
-            Make_some_Skip_sounds.SkipSoundStream();
-
             QuestionImage.IsVisible = true;
             QuestionLabelBox.IsVisible = true;
             QuestionLabel.IsVisible = true;
@@ -151,7 +143,7 @@ namespace ArTai
         {
             if (CorS)
             {//correct
-                Make_some_Correct_sounds.CorrectSoundPlay();
+                allSounds.Correctsound();
                 Global.IsCorrect[i] = 1;
                 Global.IsGuessed[i] = 1;
                 Global.IsCorrectCount += 1;
@@ -217,7 +209,7 @@ namespace ArTai
             }
             else
             {//Skipping
-                Make_some_Skip_sounds.SkipSoundPlay();
+                allSounds.Skipsound();
                 Global.IsCorrect[i] = 0;
                 Global.IsGuessed[i] = 1;
                 i++;

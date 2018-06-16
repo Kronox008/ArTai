@@ -43,7 +43,7 @@ namespace ArTai
             SelectedDeckPoster.Source = Global.DeckPoster;
             playselecteddeckButton.Text = Global.PlayButtonText;
             //SettingsButton.Text = Global.SettingsButtonText;
-            ThemeSoundPlay(); //false - just play sounds (false would stop if any playing)
+            ThemeSoundPlay(); //plays theme sounds
 
 
 
@@ -51,11 +51,10 @@ namespace ArTai
         }
         protected override void OnDisappearing()
         {
-            allSounds.StopSounds(); // true - stops sounds if playing
+            allSounds.StopSounds(); //stops sounds if playing
             base.OnDisappearing();
         }
-
-        //-------------------------------Theme sounds start------------------------------------------------------------------------------------------
+        
         
         public void ThemeSoundPlay()
         {
@@ -85,11 +84,7 @@ namespace ArTai
                     break;
             }
         }
-        //-------------------------------------Theme sounds end------------------------------------------------------------------------------------
-
-
-
-
+        
         public async void Selecteddeckinfo()
         {
             switch (Global.DeckNumber)
@@ -130,10 +125,6 @@ namespace ArTai
 
             await Navigation.PushAsync(new GameplayPage());
             Navigation.RemovePage(this);
-
-            Sound make_play_now_sound = new Sound();
-            make_play_now_sound.PlayTheGameSoundStream();
-            make_play_now_sound.PlayTheGameSoundPlay();
 
         }
 
