@@ -24,9 +24,9 @@ namespace ArTai
 
             NavigationPage.SetHasNavigationBar(this, false);
 
-            playselecteddeckButton.BackgroundColor = Color.FromHex(Global.PlaybuttonColor);
-            playselecteddeckButton.TextColor = Color.FromHex(Global.ButtonTextWhiteColor);
-            deckinfoLabel.TextColor = Color.FromHex(Global.ButtonTextWhiteColor);
+            playselecteddeckButton.BackgroundColor  = Color.FromHex(Global.PlaybuttonColor);
+            playselecteddeckButton.TextColor        = Color.FromHex(Global.ButtonTextWhiteColor);
+            deckinfoLabel.TextColor                 = Color.FromHex(Global.ButtonTextWhiteColor);
             
         }
         protected override bool OnBackButtonPressed()
@@ -39,10 +39,12 @@ namespace ArTai
         {
             Global.CheckLanguage();
             Selecteddeckinfo();
-            deckinfoLabel.Text = Global.DeckInfo;
-            SelectedDeckPoster.Source = Global.DeckPoster;
-            playselecteddeckButton.Text = Global.PlayButtonText;
+
+            deckinfoLabel.Text           = Global.DeckInfo;
+            SelectedDeckPoster.Source    = Global.DeckPoster;
+            playselecteddeckButton.Text  = Global.PlayButtonText;
             //SettingsButton.Text = Global.SettingsButtonText;
+
             ThemeSoundPlay(); //plays theme sounds
 
 
@@ -52,6 +54,7 @@ namespace ArTai
         protected override void OnDisappearing()
         {
             allSounds.StopSounds(); //stops sounds if playing
+
             base.OnDisappearing();
         }
         

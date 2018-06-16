@@ -36,14 +36,17 @@ namespace ArTai
         protected override void OnAppearing()
         {
             base.OnAppearing();
+
             MessagingCenter.Send(this, "forceLandScapePortrait"); //set sensor-landscape orientation
             MessagingCenter.Send(this, "VolumeButtonOFF");
+
             allSounds.StartGamesound();
 
         }
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
+
             MessagingCenter.Send(this, "freeorientation");
             MessagingCenter.Send(this, "VolumeButtonON");
         }
@@ -57,23 +60,23 @@ namespace ArTai
 
         private async void Animation()
         {
-            CorrectButton.BackgroundColor = Color.FromHex(Global.CorrectColorHex);
-            CorrectButton.TextColor = Color.FromHex(Global.ButtonTextWhiteColor);
-            CorrectButton.Text = Global.CorrectButtonText;
-            SkipButton.BackgroundColor = Color.FromHex(Global.SkipColorHex);
-            SkipButton.TextColor = Color.FromHex(Global.ButtonTextWhiteColor);
-            SkipButton.Text = Global.SkipButtonText;
+            CorrectButton.BackgroundColor    = Color.FromHex(Global.CorrectColorHex);
+            CorrectButton.TextColor          = Color.FromHex(Global.ButtonTextWhiteColor);
+            CorrectButton.Text               = Global.CorrectButtonText;
+            SkipButton.BackgroundColor       = Color.FromHex(Global.SkipColorHex);
+            SkipButton.TextColor             = Color.FromHex(Global.ButtonTextWhiteColor);
+            SkipButton.Text                  = Global.SkipButtonText;
             QuestionLabelBox.BackgroundColor = Color.FromHex(Global.QuestionBoxColor);
-            QuestionLabel.TextColor = Color.FromHex(Global.ButtonTextWhiteColor);
-            CountingLabel.TextColor = Color.FromHex(Global.TimersColors);
-            TimerLabel.TextColor = Color.FromHex(Global.TimersColors);
+            QuestionLabel.TextColor          = Color.FromHex(Global.ButtonTextWhiteColor);
+            CountingLabel.TextColor          = Color.FromHex(Global.TimersColors);
+            TimerLabel.TextColor             = Color.FromHex(Global.TimersColors);
             
             uint duration = 1000;
 
-            QuestionImage.IsVisible = false;
-            QuestionLabel.IsVisible = false;
-            CorrectButton.IsVisible = false;
-            SkipButton.IsVisible = false;
+            QuestionImage.IsVisible    = false;
+            QuestionLabel.IsVisible    = false;
+            CorrectButton.IsVisible    = false;
+            SkipButton.IsVisible       = false;
             QuestionLabelBox.IsVisible = false;
 
 
@@ -94,10 +97,10 @@ namespace ArTai
         }
         private void PlayTimeNow()
         {
-            QuestionImage.IsVisible = true;
-            QuestionLabelBox.IsVisible = true;
-            QuestionLabel.IsVisible = true;
-            CountingLabel.IsVisible = false;
+            QuestionImage.IsVisible     = true;
+            QuestionLabelBox.IsVisible  = true;
+            QuestionLabel.IsVisible     = true;
+            CountingLabel.IsVisible     = false;
             //  QuestionImage.Opacity = 0;
 
             QuestionLabelBox.Opacity = 0;
@@ -115,7 +118,7 @@ namespace ArTai
 
 
             CorrectButton.IsVisible = true;
-            SkipButton.IsVisible = true;
+            SkipButton.IsVisible    = true;
             VolumeButtonsActive();
             Timer();
 
@@ -123,9 +126,9 @@ namespace ArTai
 
         private async void GameOver()
         {
-            Global.CountDownTimeIsRunning = false;
-            CorrectButton.IsVisible = false;
-            SkipButton.IsVisible = false;
+            Global.CountDownTimeIsRunning   = false;
+            CorrectButton.IsVisible         = false;
+            SkipButton.IsVisible            = false;
             VolumeButtonsDisabled();
 
             await Navigation.PushAsync(new AfterGamePage());
@@ -144,15 +147,15 @@ namespace ArTai
             if (CorS)
             {//correct
                 allSounds.Correctsound();
-                Global.IsCorrect[i] = 1;
-                Global.IsGuessed[i] = 1;
+                Global.IsCorrect[i]    = 1;
+                Global.IsGuessed[i]    = 1;
                 Global.IsCorrectCount += 1;
                 i++;
 
                 if (i < Global.QuestionQuantity)
                 {
                     CorrectButton.IsEnabled = false;
-                    SkipButton.IsEnabled = false;
+                    SkipButton.IsEnabled    = false;
                     VolumeButtonsDisabled();
                     //extension color in
 
@@ -196,7 +199,7 @@ namespace ArTai
 
                     //  QuestionImage.FadeTo(Global.Questionopacity, 700);
                     CorrectButton.IsEnabled = true;
-                    SkipButton.IsEnabled = true;
+                    SkipButton.IsEnabled    = true;
                     VolumeButtonsActive();
 
                 }
@@ -217,7 +220,7 @@ namespace ArTai
                 if (i < Global.QuestionQuantity)
                 {
                     CorrectButton.IsEnabled = false;
-                    SkipButton.IsEnabled = false;
+                    SkipButton.IsEnabled    = false;
                     VolumeButtonsDisabled();
                     //extension color in
 
@@ -257,7 +260,7 @@ namespace ArTai
                     //Global.ShuffledQuestion[i, 1];
                     // QuestionImage.FadeTo(Global.Questionopacity, 700);
                     CorrectButton.IsEnabled = true;
-                    SkipButton.IsEnabled = true;
+                    SkipButton.IsEnabled    = true;
                     VolumeButtonsActive();
                 }
                 else

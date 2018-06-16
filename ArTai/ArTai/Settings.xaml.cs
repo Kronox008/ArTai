@@ -25,8 +25,11 @@ namespace ArTai
         public Settings()
         {
             InitializeComponent();
+
             NavigationPage.SetHasNavigationBar(this, false);
+
             LanguagePicker.SelectedIndex = Global.LanguagePickerIndex;
+
             SetFields();
         }
 
@@ -34,6 +37,7 @@ namespace ArTai
         protected override void OnAppearing()
         {
             allSounds.OpenSettingssound();
+
             base.OnAppearing();
         }
         protected override void OnDisappearing()
@@ -48,19 +52,19 @@ namespace ArTai
         private void SetFields()
         {
             //colors
-            TimeStepperLabel.TextColor = Color.FromHex(Global.ButtonTextWhiteColor);
-            LanguagePickerLabel.TextColor = Color.FromHex((Global.ButtonTextWhiteColor));
-            LanguagePicker.TextColor = Color.FromHex((Global.ButtonTextWhiteColor));
-            QuestionStepperLabel.TextColor = Color.FromHex(Global.ButtonTextWhiteColor);
-            DownloadLabel.TextColor = Color.FromHex(Global.ButtonTextWhiteColor);
+            TimeStepperLabel.TextColor       = Color.FromHex(Global.ButtonTextWhiteColor);
+            LanguagePickerLabel.TextColor    = Color.FromHex((Global.ButtonTextWhiteColor));
+            LanguagePicker.TextColor         = Color.FromHex((Global.ButtonTextWhiteColor));
+            QuestionStepperLabel.TextColor   = Color.FromHex(Global.ButtonTextWhiteColor);
+            DownloadLabel.TextColor          = Color.FromHex(Global.ButtonTextWhiteColor);
 
-            LanguagePickerLabel.Text = Global.LanguagePickerLabel;
-            LanguagePicker.Title = Global.LanguagePickerTitle;
+            LanguagePickerLabel.Text    = Global.LanguagePickerLabel;
+            LanguagePicker.Title        = Global.LanguagePickerTitle;
             LanguagePicker.SelectedItem = Global.LanguagePickerItem;
-            TimeStepper.Value = Global.CountDownTime;
-            Questiontepper.Value = Global.QuestionQuantity;
-            QuestionStepperLabel.Text = String.Format("{0} {1}", Global.QuestionQuantity, Global.QuestionslabelText);
-            DownloadLabel.Text = Global.DownloadLabel;
+            TimeStepper.Value           = Global.CountDownTime;
+            Questiontepper.Value        = Global.QuestionQuantity;
+            QuestionStepperLabel.Text   = String.Format("{0} {1}", Global.QuestionQuantity, Global.QuestionslabelText);
+            DownloadLabel.Text          = Global.DownloadLabel;
 
             if (Global.CountDownTime <= 180)
             {
@@ -95,7 +99,7 @@ namespace ArTai
         //Question stepper--------------------------------------------------------------------------
         private void Questiontepper_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            Global.QuestionQuantity = Convert.ToInt32(Questiontepper.Value);
+            Global.QuestionQuantity   = Convert.ToInt32(Questiontepper.Value);
             QuestionStepperLabel.Text = String.Format("{0} {1}", Global.QuestionQuantity, Global.QuestionslabelText);
 
             SaveToDB();
@@ -139,10 +143,10 @@ namespace ArTai
             var Save_TO_DB = new GameSelectionPage.Saved_Settings()
             {
                 StaticId = 1,
-                Saved_Quantity = Global.QuestionQuantity,
-                Saved_Time = Global.CountDownTime,
-                LanguageId = Global.LanguageSelectedID,
-                DownloadImages = Global.DownloadImages,
+                Saved_Quantity  = Global.QuestionQuantity,
+                Saved_Time      = Global.CountDownTime,
+                LanguageId      = Global.LanguageSelectedID,
+                DownloadImages  = Global.DownloadImages,
 
             };
             _connection = DependencyService.Get<ISQLiteDb>().GetConnection();

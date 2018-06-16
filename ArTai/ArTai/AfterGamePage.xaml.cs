@@ -21,17 +21,18 @@ namespace ArTai
             NavigationPage.SetHasNavigationBar(this, false);
 
 
-            SelectedDeckPoster.Source = Global.DeckPoster;
-            MenuButton.BackgroundColor = Color.FromHex(Global.ButtonBackColor);
-            MenuButton.TextColor = Color.FromHex(Global.ButtonTextWhiteColor);
+            SelectedDeckPoster.Source   = Global.DeckPoster;
+            MenuButton.BackgroundColor  = Color.FromHex(Global.ButtonBackColor);
+            MenuButton.TextColor        = Color.FromHex(Global.ButtonTextWhiteColor);
             AgainButton.BackgroundColor = Color.FromHex(Global.PlaybuttonColor);
-            AgainButton.TextColor = Color.FromHex(Global.ButtonTextWhiteColor);
-            AgainButton.Text = Global.AgainButtonText;
-            ScoreLabel.TextColor = Color.FromHex(Global.CorrectColorHex);
+            AgainButton.TextColor       = Color.FromHex(Global.ButtonTextWhiteColor);
+            AgainButton.Text            = Global.AgainButtonText;
+            ScoreLabel.TextColor        = Color.FromHex(Global.CorrectColorHex);
 
-            ScoreLabel.Text = (String.Format("{1}{0}", Global.IsCorrectCount, Global.ScoreLabeltext));
-            int TotalQuestion = (Global.ShuffledQuestion.Length) / 2;
+            ScoreLabel.Text      = (String.Format("{1}{0}", Global.IsCorrectCount, Global.ScoreLabeltext));
+            int TotalQuestion    = (Global.ShuffledQuestion.Length) / 2;
             Label[] arrayListing = new Label[TotalQuestion]; // declare the label object
+
             for (int i = 0; i < TotalQuestion; i++)
             {
                 if ((Global.IsGuessed[i] == 1) && (Global.IsCorrect[i] == 1))

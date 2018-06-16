@@ -13,10 +13,10 @@ namespace ArTai
             view.Animate("ShiftColorTo",
                 x =>
                 {
-                    var red = sourceColor.R + (x * (targetColor.R - sourceColor.R));
-                    var green = sourceColor.G + (x * (targetColor.G - sourceColor.G));
-                    var blue = sourceColor.B + (x * (targetColor.B - sourceColor.B));
-                    var alpha = sourceColor.A + (x * (targetColor.A - sourceColor.A));
+                    var red     = sourceColor.R + (x * (targetColor.R - sourceColor.R));
+                    var green   = sourceColor.G + (x * (targetColor.G - sourceColor.G));
+                    var blue    = sourceColor.B + (x * (targetColor.B - sourceColor.B));
+                    var alpha   = sourceColor.A + (x * (targetColor.A - sourceColor.A));
 
                     setter(Color.FromRgba(red, green, blue, alpha));
                 },

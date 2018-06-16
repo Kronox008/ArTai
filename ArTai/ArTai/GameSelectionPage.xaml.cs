@@ -18,11 +18,11 @@ namespace ArTai
         public class Saved_Settings
         {
             [SQLite.PrimaryKey, SQLite.AutoIncrement]
-            public int StaticId { get; set; }
-            public int Saved_Quantity { get; set; }
-            public int Saved_Time { get; set; }
-            public int LanguageId { get; set; }
-            public bool DownloadImages { get; set; }
+            public int  StaticId         { get; set; }
+            public int  Saved_Quantity   { get; set; }
+            public int  Saved_Time       { get; set; }
+            public int  LanguageId       { get; set; }
+            public bool DownloadImages   { get; set; }
 
         }
 
@@ -33,18 +33,18 @@ namespace ArTai
 
             NavigationPage.SetHasNavigationBar(this, false);
 
-            SettingsButton.BackgroundColor = Color.FromHex(Global.ButtonBackColor);
-            SettingsButton.TextColor = Color.FromHex(Global.ButtonTextWhiteColor);
-            InfoButton.BackgroundColor = Color.FromHex(Global.ButtonBackColor);
-            InfoButton.TextColor = Color.FromHex(Global.ButtonTextWhiteColor);
+            SettingsButton.BackgroundColor  = Color.FromHex(Global.ButtonBackColor);
+            SettingsButton.TextColor        = Color.FromHex(Global.ButtonTextWhiteColor);
+            InfoButton.BackgroundColor      = Color.FromHex(Global.ButtonBackColor);
+            InfoButton.TextColor            = Color.FromHex(Global.ButtonTextWhiteColor);
 
 
         }
         private void setLanguage()
         {
             Global.CheckLanguage();
-            SettingsButton.Text = Global.SettingsButtonText;
-            InfoButton.Text = Global.InfoButtonText;
+            SettingsButton.Text  = Global.SettingsButtonText;
+            InfoButton.Text      = Global.InfoButtonText;
         }
         protected override bool OnBackButtonPressed()
         {
@@ -70,21 +70,21 @@ namespace ArTai
             {
                 var DefaultNumbers = new Saved_Settings()
                 {
-                    StaticId = 1,
-                    Saved_Quantity = 10,
-                    Saved_Time = 90,
-                    LanguageId = 1,
-                    DownloadImages = true,
+                    StaticId        = 1,
+                    Saved_Quantity  = 10,
+                    Saved_Time      = 90,
+                    LanguageId      = 1,
+                    DownloadImages  = true,
                 };
                 await _connection.InsertOrReplaceAsync(DefaultNumbers);
 
             }
             LoadNumbers = await _connection.GetAsync<Saved_Settings>(1);
 
-            Global.QuestionQuantity = LoadNumbers.Saved_Quantity;
-            Global.CountDownTime = LoadNumbers.Saved_Time;
-            Global.LanguageSelectedID = LoadNumbers.LanguageId;
-            Global.DownloadImages = LoadNumbers.DownloadImages;
+            Global.QuestionQuantity     = LoadNumbers.Saved_Quantity;
+            Global.CountDownTime        = LoadNumbers.Saved_Time;
+            Global.LanguageSelectedID   = LoadNumbers.LanguageId;
+            Global.DownloadImages       = LoadNumbers.DownloadImages;
             enableButtons();
             setLanguage();
 
@@ -94,54 +94,54 @@ namespace ArTai
 
         private async void myGOT_Clicked(object sender, EventArgs e)
         {
-            myGOT.IsEnabled = false;
-            Global.DeckNumber = 1;
-            Global.DeckPoster = "GOT.jpg";
+            myGOT.IsEnabled      = false;
+            Global.DeckNumber    = 1;
+            Global.DeckPoster    = "GOT.jpg";
             Global.DeckWallpaper = "GOT_W.jpg";
             await Navigation.PushAsync(new SelectedGameInfoPage());
         }
 
         private async void myLOTR_Clicked(object sender, EventArgs e)
         {
-            myLOTR.IsEnabled = false;
-            Global.DeckNumber = 2;
-            Global.DeckPoster = "lord.jpg";
+            myLOTR.IsEnabled     = false;
+            Global.DeckNumber    = 2;
+            Global.DeckPoster    = "lord.jpg";
             Global.DeckWallpaper = Global.DeckPoster;
             await Navigation.PushAsync(new SelectedGameInfoPage());
         }
 
         private async void myHP_Clicked(object sender, EventArgs e)
         {
-            myHP.IsEnabled = false;
-            Global.DeckNumber = 3;
-            Global.DeckPoster = "Harry.jpg";
+            myHP.IsEnabled       = false;
+            Global.DeckNumber    = 3;
+            Global.DeckPoster    = "Harry.jpg";
             Global.DeckWallpaper = "Harry_W.jpg";
             await Navigation.PushAsync(new SelectedGameInfoPage());
         }
 
         private async void myFriend_Clicked(object sender, EventArgs e)
         {
-            myFriend.IsEnabled = false;
-            Global.DeckNumber = 4;
-            Global.DeckPoster = "friends.jpg";
+            myFriend.IsEnabled   = false;
+            Global.DeckNumber    = 4;
+            Global.DeckPoster    = "friends.jpg";
             Global.DeckWallpaper = "friends_W.jpg";
             await Navigation.PushAsync(new SelectedGameInfoPage());
         }
 
         private async void myAnimal_Clicked(object sender, EventArgs e)
         {
-            myAnimal.IsEnabled = false;
-            Global.DeckNumber = 5;
-            Global.DeckPoster = "animals.jpg";
+            myAnimal.IsEnabled   = false;
+            Global.DeckNumber    = 5;
+            Global.DeckPoster    = "animals.jpg";
             Global.DeckWallpaper = Global.DeckPoster;
             await Navigation.PushAsync(new SelectedGameInfoPage());
         }
 
         private async void myAOM_Clicked(object sender, EventArgs e)
         {
-            myAOM.IsEnabled = false;
-            Global.DeckNumber = 6;
-            Global.DeckPoster = "AOM.jpg";
+            myAOM.IsEnabled      = false;
+            Global.DeckNumber    = 6;
+            Global.DeckPoster    = "AOM.jpg";
             Global.DeckWallpaper = Global.DeckPoster;
             await Navigation.PushAsync(new SelectedGameInfoPage());
         }
@@ -160,13 +160,13 @@ namespace ArTai
         private void enableButtons()
         {
             SettingsButton.IsEnabled = true;
-            InfoButton.IsEnabled = true;
-            myFriend.IsEnabled = true;
-            myHP.IsEnabled = true;
-            myLOTR.IsEnabled = true;
-            myGOT.IsEnabled = true;
-            myAOM.IsEnabled = true;
-            myAnimal.IsEnabled = true;
+            InfoButton.IsEnabled     = true;
+            myFriend.IsEnabled       = true;
+            myHP.IsEnabled           = true;
+            myLOTR.IsEnabled         = true;
+            myGOT.IsEnabled          = true;
+            myAOM.IsEnabled          = true;
+            myAnimal.IsEnabled       = true;
 
         }
     }
