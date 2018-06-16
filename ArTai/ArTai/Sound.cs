@@ -247,19 +247,18 @@ namespace ArTai
         {
             System.Random RandomNumber = new System.Random();
 
-            string soundName0 = "death.wav";
-            string soundName1 = "king.wav";
-            string soundName2 = "reddawn.wav";
-            string soundName3 = "reddawn.wav";
-            string soundName4 = "shallnotpass.wav";
-            string soundName5 = "task.wav";
-            string soundName6 = "tried.wav";
+            string soundName0 = "death.wav"; //crash
+            string soundName1 = "reddawn.wav"; //works
+            string soundName2 = "king.wav"; //crash
+            string soundName3 = "shallnotpass.wav"; //works
+            string soundName4 = "task.wav"; //works
+            string soundName5 = "tried.wav"; //crash
             string soundPath  = "ArTai.Sounds.LoTR.";
 
            
             allSounds = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
 
-            int soundNumber = RandomNumber.Next(0, 7);         // 2-1 = total streams
+            int soundNumber = RandomNumber.Next(0, 6);         // 2-1 = total streams
             
 
             switch (soundNumber)
@@ -287,10 +286,6 @@ namespace ArTai
                 case 5:
                     var LoTR5 = GetStream(soundPath, soundName5);
                     allSounds.Load(LoTR5);
-                    break;
-                case 6:
-                    var LoTR6 = GetStream(soundPath, soundName6);
-                    allSounds.Load(LoTR6);
                     break;
                 default:
                     break;
@@ -415,7 +410,7 @@ namespace ArTai
             string soundName1 = "godpower.wav";
             string soundName2 = "xsentinelbirth.wav";
             string soundName3 = "xwin.wav";
-            string soundPath = "ArTai.Sounds.HP.";
+            string soundPath = "ArTai.Sounds.Myth.";
 
             allSounds = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
 

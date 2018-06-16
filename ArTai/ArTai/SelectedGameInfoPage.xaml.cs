@@ -17,19 +17,7 @@ namespace ArTai
 
         Sound allSounds = new Sound();
 
-        ISimpleAudioPlayer GOT_Theme_00; ISimpleAudioPlayer GOT_Theme_01;
-
-        ISimpleAudioPlayer LORD_Theme_00; ISimpleAudioPlayer LORD_Theme_01; ISimpleAudioPlayer LORD_Theme_02; ISimpleAudioPlayer LORD_Theme_03; ISimpleAudioPlayer LORD_Theme_04;
-
-        ISimpleAudioPlayer HP_Theme_00; ISimpleAudioPlayer HP_Theme_01; ISimpleAudioPlayer HP_Theme_02;
-
-        ISimpleAudioPlayer Friends_Theme_00; ISimpleAudioPlayer Friends_Theme_01; ISimpleAudioPlayer Friends_Theme_02; ISimpleAudioPlayer Friends_Theme_03; ISimpleAudioPlayer Friends_Theme_04;
-
-        ISimpleAudioPlayer Animal_Theme_00;
-
-        ISimpleAudioPlayer Myth_Theme_00; ISimpleAudioPlayer Myth_Theme_01; ISimpleAudioPlayer Myth_Theme_02; ISimpleAudioPlayer Myth_Theme_03;
-
-
+        
         public SelectedGameInfoPage()
         {
             InitializeComponent();

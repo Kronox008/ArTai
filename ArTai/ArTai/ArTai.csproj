@@ -6,15 +6,21 @@
 
   <ItemGroup>
     <None Remove="Sounds\Animals\Narwhals.mp3" />
+    <None Remove="Sounds\Animals\Narwhals.wav" />
     <None Remove="Sounds\chestOPEN.mp3" />
     <None Remove="Sounds\conjure_item.mp3" />
     <None Remove="Sounds\dot.mp3" />
     <None Remove="Sounds\draenei_chest_anims_close.mp3" />
     <None Remove="Sounds\friends\couldie.mp3" />
+    <None Remove="Sounds\friends\couldie.wav" />
     <None Remove="Sounds\friends\howdoing.mp3" />
+    <None Remove="Sounds\friends\howdoing.wav" />
     <None Remove="Sounds\friends\ripped.mp3" />
+    <None Remove="Sounds\friends\ripped.wav" />
     <None Remove="Sounds\friends\secrets.mp3" />
+    <None Remove="Sounds\friends\secrets.wav" />
     <None Remove="Sounds\friends\smellyct.mp3" />
+    <None Remove="Sounds\friends\smellyct.wav" />
     <None Remove="Sounds\glueenterworldbutton.mp3" />
     <None Remove="Sounds\GOT\got_s1e5_pays_his_debts.wav" />
     <None Remove="Sounds\GOT\got_s1e7_win_or_die.wav" />
@@ -36,18 +42,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Sounds\Animals\Narwhals.mp3" />
+    <EmbeddedResource Include="Sounds\Animals\Narwhals.wav" />
     <EmbeddedResource Include="Sounds\chestOPEN.mp3" />
     <EmbeddedResource Include="Sounds\conjure_item.mp3">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Sounds\dot.mp3" />
     <EmbeddedResource Include="Sounds\draenei_chest_anims_close.mp3" />
-    <EmbeddedResource Include="Sounds\friends\couldie.mp3" />
-    <EmbeddedResource Include="Sounds\friends\howdoing.mp3" />
-    <EmbeddedResource Include="Sounds\friends\ripped.mp3" />
-    <EmbeddedResource Include="Sounds\friends\secrets.mp3" />
-    <EmbeddedResource Include="Sounds\friends\smellyct.mp3" />
+    <EmbeddedResource Include="Sounds\friends\couldie.wav" />
+    <EmbeddedResource Include="Sounds\friends\howdoing.wav" />
+    <EmbeddedResource Include="Sounds\friends\ripped.wav" />
+    <EmbeddedResource Include="Sounds\friends\secrets.wav" />
+    <EmbeddedResource Include="Sounds\friends\smellyct.wav" />
     <EmbeddedResource Include="Sounds\glueenterworldbutton.mp3" />
     <EmbeddedResource Include="Sounds\GOT\got_s1e5_pays_his_debts.wav" />
     <EmbeddedResource Include="Sounds\GOT\got_s1e7_win_or_die.wav" />
