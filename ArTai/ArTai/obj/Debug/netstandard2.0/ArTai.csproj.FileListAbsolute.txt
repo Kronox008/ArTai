@@ -14,3 +14,4 @@ C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\ArTai.A
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\ArTai.dll
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\ArTai.pdb
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\ArTai.csprojAssemblyReference.cache

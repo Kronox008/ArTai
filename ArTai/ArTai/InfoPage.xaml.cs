@@ -28,6 +28,8 @@ namespace ArTai
             TitleLabel_2.TextColor = Color.FromHex(Global.ButtonTextWhiteColor);
             GameLabel_2.TextColor  = Color.FromHex(Global.ButtonTextWhiteColor);
 
+            BackButton.Text = Global.BackButtonText;
+
 
         }
         protected override void OnAppearing()
@@ -44,5 +46,9 @@ namespace ArTai
             base.OnDisappearing();
         }
 
+        private void BackButton_Clicked(object sender, EventArgs e)
+        {
+            base.OnBackButtonPressed();
+        }
     }
 }

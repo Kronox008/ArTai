@@ -9,6 +9,7 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
+                <RowDefinition Height="35" />
 
             </Grid.RowDefinitions>
             <Image Opacity="0.2" Aspect="AspectFill" Grid.Row="0" Grid.Column="0" Source="Net.jpg"></Image>
@@ -70,6 +71,7 @@
                     </TableSection>
                 </TableRoot>
             </TableView>
+            <Button x:Name="BackButton" Grid.Row="1" Grid.Column="0" Margin="30, 0, 30, 0" Opacity="0.9" BackgroundColor="#50c878" Clicked="BackButton_Clicked"></Button>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

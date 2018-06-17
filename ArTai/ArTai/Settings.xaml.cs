@@ -43,7 +43,7 @@ namespace ArTai
         protected override void OnDisappearing()
         {
             allSounds.CloseSettingssound();
-
+            SaveToDB();
             base.OnDisappearing();
         }
 
@@ -65,6 +65,7 @@ namespace ArTai
             Questiontepper.Value        = Global.QuestionQuantity;
             QuestionStepperLabel.Text   = String.Format("{0} {1}", Global.QuestionQuantity, Global.QuestionslabelText);
             DownloadLabel.Text          = Global.DownloadLabel;
+            BackButton.Text             = Global.BackButtonText;
 
             if (Global.CountDownTime <= 180)
             {
@@ -93,7 +94,7 @@ namespace ArTai
                 TimeStepperLabel.Text = "∞ sec";
             }
 
-            SaveToDB();
+            //SaveToDB();
 
         }
         //Question stepper--------------------------------------------------------------------------
@@ -102,7 +103,7 @@ namespace ArTai
             Global.QuestionQuantity   = Convert.ToInt32(Questiontepper.Value);
             QuestionStepperLabel.Text = String.Format("{0} {1}", Global.QuestionQuantity, Global.QuestionslabelText);
 
-            SaveToDB();
+           // SaveToDB();
         }
 
 
@@ -123,7 +124,7 @@ namespace ArTai
                 SetFields();
             }
 
-            SaveToDB();
+            //SaveToDB();
 
         }
 
@@ -135,7 +136,7 @@ namespace ArTai
         private void DownloadSwitch_Toggled(object sender, ToggledEventArgs e)
         {
             Global.DownloadImages = DownloadSwitch.IsToggled;
-            SaveToDB();
+            //SaveToDB();
         }
         private async void SaveToDB()
         {
@@ -152,6 +153,12 @@ namespace ArTai
             _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
             await _connection.InsertOrReplaceAsync(Save_TO_DB);
         }
+
+        private void BackButton_Clicked(object sender, EventArgs e)
+        {
+            base.OnBackButtonPressed();
+        }
+        
     }
 
 }

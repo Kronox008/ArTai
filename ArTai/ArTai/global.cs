@@ -86,6 +86,7 @@ namespace ArTai
         public static string SkipButtonText      { get; set; }
         public static string AgainButtonText     { get; set; }
         public static string DownloadLabel       { get; set; }
+        public static string BackButtonText      { get; set; }
 
 
 
@@ -112,6 +113,7 @@ namespace ArTai
                 SkipButtonText      = "Skip";
                 AgainButtonText     = "Play again";
                 DownloadLabel       = "Image downloading";
+                BackButtonText      = "Back";
 
             }
             else
@@ -136,6 +138,7 @@ namespace ArTai
                 SkipButtonText      = "Praleisti";
                 AgainButtonText     = "Dar kartą";
                 DownloadLabel       = "Paveikslėlių naudojimas";
+                BackButtonText      = "Atgal";
             }
 
         }
