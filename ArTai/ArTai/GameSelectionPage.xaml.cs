@@ -170,6 +170,14 @@ namespace ArTai
             Global.DeckWallpaper = Global.DeckPoster;
             await Navigation.PushAsync(new SelectedGameInfoPage());
         }
+        private async void myPeople_Clicked(object sender, EventArgs e)
+        {
+            myPeople.IsEnabled = false;
+            Global.DeckNumber = 7;
+            Global.DeckPoster = "people.jpg";
+            Global.DeckWallpaper = Global.DeckPoster;
+            await Navigation.PushAsync(new SelectedGameInfoPage());
+        }
 
         private void InfoButton_Clicked(object sender, EventArgs e)
         {
@@ -225,5 +233,7 @@ namespace ArTai
 
 
         }
+
+       
     }
 }

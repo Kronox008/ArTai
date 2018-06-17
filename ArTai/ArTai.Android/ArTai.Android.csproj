@@ -102,7 +102,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\people.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ArTai\ArTai.csproj">
       <Project>{72ACAF90-7520-42A0-994B-338EE9F1554C}</Project>

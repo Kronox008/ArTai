@@ -17,6 +17,7 @@
                     <RowDefinition Height="250" />
                     <RowDefinition Height="250" />
                     <RowDefinition Height="250" />
+                    <RowDefinition Height="250" />
                 </Grid.RowDefinitions>
 
                 <!--DOTO: lang picker to default lang-->
@@ -53,6 +54,9 @@
 
                 <Image Grid.Row="4" Grid.Column="1" Source="AOM.jpg" Aspect="AspectFill"></Image>
                 <Button x:Name="myAOM" Grid.Row="4" Grid.Column="1" Opacity="0" Clicked="myAOM_Clicked"></Button>
+
+                <Image  Grid.Row="5" Grid.Column="0" Source="people.jpg" Aspect="AspectFill"></Image>
+                <Button x:Name="myPeople" Grid.Row="5" Grid.Column="0" Opacity="0" Clicked="myPeople_Clicked"></Button>
 
             </Grid>
         </ScrollView>

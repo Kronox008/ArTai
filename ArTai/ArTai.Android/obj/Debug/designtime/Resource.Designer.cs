@@ -3026,6 +3026,9 @@ namespace ArTai.Droid
 			// aapt resource value: 0x7F09000C
 			public const int notify_panel_notification_icon_bg = 2131296268;
 			
+			// aapt resource value: 0x7F010015
+			public const int people = 2130771989;
+			
 			// aapt resource value: 0x7F010003
 			public const int splash = 2130771971;
 			

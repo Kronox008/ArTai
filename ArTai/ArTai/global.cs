@@ -15,9 +15,7 @@ namespace ArTai
         public static int    Deckcounter     { get; set; }     //    how many records in deck
         public static string DeckPoster      { get; set; }    //     deck poster string
         public static string DeckWallpaper   { get; set; }
-
-
-
+        
 
         //Numbers for Questions to be selected
         public static int[] Numbers = new int[50];

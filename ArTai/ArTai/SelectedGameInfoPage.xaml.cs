@@ -83,6 +83,9 @@ namespace ArTai
                 case 6:
                     allSounds.Mythsounds();
                     break;
+                case 7:
+                    allSounds.Mythsounds();
+                    break;
                 default:
                     break;
             }
@@ -113,8 +116,10 @@ namespace ArTai
                     Animals.SetDeckInfo();
                     break;
                 case 6:
-
                     Myth.SetDeckInfo();
+                    break;
+                case 7:
+                    People.SetDeckInfo();
                     break;
                 default:
                     await Navigation.PushAsync(new GameSelectionPage());

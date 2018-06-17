@@ -137,6 +137,7 @@ C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\android\assets
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\android\assets\System.Xml.pdb
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\android\assets\Xamarin.Forms.Core.pdb
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.pdb
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\res\drawable-xxhdpi\people.jpg
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\bin\Debug\ArTai.Android.dll
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\linksrc\ArTai.pdb
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\linksrc\ArTai.Android.dll.mdb
