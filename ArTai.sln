@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArTai.iOS", "ArTai\ArTai.iO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArTai.UWP", "ArTai\ArTai.UWP\ArTai.UWP.csproj", "{6B50E5F4-E30A-4E62-B4BC-4783DD1EE6A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArTai", "ArTai\ArTai\ArTai.csproj", "{4A832531-683C-4D33-8B49-CA31F1DAF3F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArTai", "ArTai\ArTai\ArTai.csproj", "{4A832531-683C-4D33-8B49-CA31F1DAF3F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
