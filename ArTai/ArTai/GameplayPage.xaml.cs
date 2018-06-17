@@ -16,6 +16,7 @@ namespace ArTai
     {
         Sound allSounds = new Sound();
 
+        bool Playing;
         int i = 0;
 
         public GameplayPage()
@@ -37,6 +38,8 @@ namespace ArTai
         {
             base.OnAppearing();
 
+            Playing = true;
+
             MessagingCenter.Send(this, "forceLandScapePortrait"); //set sensor-landscape orientation
             MessagingCenter.Send(this, "VolumeButtonOFF");
 
@@ -45,6 +48,9 @@ namespace ArTai
         }
         protected override void OnDisappearing()
         {
+            Playing = false;
+            allSounds.StopSounds();
+
             base.OnDisappearing();
 
             MessagingCenter.Send(this, "freeorientation");
@@ -90,8 +96,11 @@ namespace ArTai
 
             CountingLabel.Text = "1";
             await CountingLabel.RotateTo(1083, duration, Easing.SinInOut);
-
-            allSounds.Ticksound();     /////////////////////// Sound
+            if (Playing)
+            {
+                allSounds.Ticksound();     /////////////////////// Sound
+            }
+            
 
             PlayTimeNow();
         }

@@ -75,7 +75,7 @@ namespace ArTai.Decks
 
                 Global.Deckcounter = countEN;
                 Global.DeckName = "Lord of the Rings & Hobbit Deck";
-                Global.DeckInfo = "Lord of the Rings & Hobbit characters and items";
+                Global.DeckInfo = "Lord of the Rings & Hobbit characters, quotes, places, items.";
                 Randomizing.Randomize(allQuestions_in_orderEN);
 
 
@@ -150,7 +150,7 @@ namespace ArTai.Decks
 
                 Global.Deckcounter = countLT;
                 Global.DeckName = "Žiedų valdovo ir Hobito kaladė";
-                Global.DeckInfo = "Kaladės informacija";
+                Global.DeckInfo = "Žiedų valdovo ir Hobito personažai, citatos, vietos, daiktai.";
                 Randomizing.Randomize(allQuestions_in_orderLT);
 
             }

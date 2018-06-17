@@ -68,6 +68,7 @@ namespace ArTai
         //--------------Languages?-----------------------------------------------------------------------------
         public static int LanguageSelectedID { get; set; }
 
+        public static string SuggestionsText { get; set; }
         public static string SettingsButtonText  { get; set; }
         public static string InfoButtonText      { get; set; }
         public static string PlayButtonText      { get; set; }
@@ -92,15 +93,16 @@ namespace ArTai
         {
             if (LanguageSelectedID == 0)
             {
-
+                SuggestionsText     = "What to improve?";
                 SettingsButtonText  = "Settings";
                 InfoButtonText      = "How to Play";
                 PlayButtonText      = "Play";
                 QuestionslabelText  = "questions";
                 HowToLabeltitle1    = " Game 1:";
-                HowToLabeltext1     = "English explanation";
-                HowToLabeltitle2    = " Game 2:";
-                HowToLabeltext2     = "English explanation English explanation English explanation English explanation";
+                HowToLabeltext1     = "Hold your phone before you. Your friend should try to tell you what person, thing or place is on the screen. " + 
+                                      "Go to the next question with Volume up/down keys or buttons on the screen.";
+                HowToLabeltitle2    = "";
+                HowToLabeltext2     = "";
                 ScoreLabeltext      = "Score: ";
                 LanguagePickerLabel = "Language: ";
                 LanguagePickerTitle = "Language";
@@ -114,6 +116,7 @@ namespace ArTai
             }
             else
             {
+                SuggestionsText     = "Ką patobulinti?";
                 SettingsButtonText  = "Nustatymai";
                 InfoButtonText      = "Kaip žaisti?";
                 PlayButtonText      = "Pradėti";
@@ -122,10 +125,8 @@ namespace ArTai
                 HowToLabeltext1     = "Telefona laikyk prieš save. Aiškinantis žaidėjas/komanda bandys tau padėti atspėti," +
                                       " koks gi žmogus/personažas/įvykis/vieta/citata šįkart įsitaisius tavo telefone! " +
                                       "(Klausimai keičiami spaudžiant garsinimo / tildymo mygtukus ar mygtukus ekrane.";
-                HowToLabeltitle2    = " 2 variantas:";
-                HowToLabeltext2     = "Telefona laikyk prieš save. Aiškinantis žaidėjas/komanda bandys tau padėti atspėti," +
-                                      " koks gi žmogus/personažas/įvykis/vieta/citata šįkart įsitaisius tavo telefone! " +
-                                      "(Klausimai keičiami spaudžiant garsinimo / tildymo mygtukus ar mygtukus ekrane.";
+                HowToLabeltitle2    = "";
+                HowToLabeltext2     = "";
                 ScoreLabeltext      = "Taškai: ";
                 LanguagePickerLabel = "Kalba: ";
                 LanguagePickerTitle = " Kalba  ";

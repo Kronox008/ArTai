@@ -37,14 +37,20 @@ namespace ArTai
             SettingsButton.TextColor        = Color.FromHex(Global.ButtonTextWhiteColor);
             InfoButton.BackgroundColor      = Color.FromHex(Global.ButtonBackColor);
             InfoButton.TextColor            = Color.FromHex(Global.ButtonTextWhiteColor);
+            Suggestions.BackgroundColor     = Color.FromHex(Global.ButtonBackColor);
+
 
 
         }
         private void setLanguage()
         {
             Global.CheckLanguage();
+            Suggestions.Text     = Global.SuggestionsText;
             SettingsButton.Text  = Global.SettingsButtonText;
             InfoButton.Text      = Global.InfoButtonText;
+            
+            
+            
         }
         protected override bool OnBackButtonPressed()
         {
@@ -68,12 +74,15 @@ namespace ArTai
             }
             catch (Exception)
             {
+                Global.LanguagePickerIndex = 0;
+                LanguagePicker.Focus();
+
                 var DefaultNumbers = new Saved_Settings()
                 {
                     StaticId        = 1,
                     Saved_Quantity  = 10,
                     Saved_Time      = 90,
-                    LanguageId      = 1,
+                    LanguageId      = Global.LanguageSelectedID,
                     DownloadImages  = true,
                 };
                 await _connection.InsertOrReplaceAsync(DefaultNumbers);
@@ -90,7 +99,7 @@ namespace ArTai
 
             MessagingCenter.Send(this, Global.LanguageSelectedID.ToString()); //set double tap to exit toaster message language
             MessagingCenter.Send(this, "CanExit"); //enable double tap to exit
-
+            
             base.OnAppearing();
 
             
@@ -102,6 +111,10 @@ namespace ArTai
 
             base.OnDisappearing();
             
+        }
+        private void Suggestions_Clicked(object sender, EventArgs e)
+        {
+            Device.OpenUri(new Uri(String.Format("mailto:{0}", "paulius.braska@gmail.com")));
         }
 
         private async void myGOT_Clicked(object sender, EventArgs e)
@@ -179,6 +192,37 @@ namespace ArTai
             myGOT.IsEnabled          = true;
             myAOM.IsEnabled          = true;
             myAnimal.IsEnabled       = true;
+        }
+
+        private async void LanguagePicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (LanguagePicker.SelectedIndex == 0)
+            {
+                Global.LanguageSelectedID = 0;
+                Global.CheckLanguage();
+                setLanguage();
+            }
+            else
+            {
+                Global.LanguageSelectedID = 1;
+                Global.CheckLanguage();
+                setLanguage();
+            }
+
+
+            var DefaultNumbers = new Saved_Settings()
+            {
+                StaticId = 1,
+                Saved_Quantity = 10,
+                Saved_Time = 90,
+                LanguageId = Global.LanguageSelectedID,
+                DownloadImages = true,
+            };
+
+            await _connection.InsertOrReplaceAsync(DefaultNumbers);
+
+
+
 
         }
     }

@@ -55,6 +55,12 @@ namespace ArTai
 
             base.OnAppearing();
         }
+        protected override void OnDisappearing()
+        {
+            allSounds.StopSounds();
+
+            base.OnDisappearing();
+        }
 
         protected override bool OnBackButtonPressed()
         {

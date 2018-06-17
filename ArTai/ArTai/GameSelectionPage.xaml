@@ -12,36 +12,47 @@
               ColumnSpacing="10"
               >
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="38" />
                     <RowDefinition Height="40" />
                     <RowDefinition Height="250" />
                     <RowDefinition Height="250" />
                     <RowDefinition Height="250" />
                 </Grid.RowDefinitions>
 
-                <Button x:Name="SettingsButton" Grid.Row="0" Grid.Column="0" Clicked="SettingsButton_Clicked" BorderRadius="80" ></Button>
-                <Button x:Name="InfoButton" Text="Kaip žaisti?" Grid.Row="0" Grid.Column="1" Clicked="InfoButton_Clicked" BorderRadius="80"></Button>
+                <!--DOTO: lang picker to default lang-->
+                <Picker IsVisible="False" x:Name="LanguagePicker" VerticalOptions="Center" HorizontalOptions="Center" Title="" SelectedIndex="1" SelectedIndexChanged="LanguagePicker_SelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>English</x:String>
+                        <x:String>Lietuvių</x:String>
+                    </Picker.Items>
+                </Picker>
 
-                <Image  Grid.Row="1" Grid.Column="0" Source="GOT.jpg" Aspect="AspectFill"></Image>
-                <Button x:Name="myGOT" Grid.Row="1" Grid.Column="0" Opacity="0" Clicked="myGOT_Clicked" ></Button>
+                <Button x:Name="Suggestions" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Clicked="Suggestions_Clicked" TextColor="Gold" BorderRadius="80"></Button>
 
+                <Button x:Name="SettingsButton" Grid.Row="1" Grid.Column="0" Clicked="SettingsButton_Clicked" BorderRadius="80" ></Button>
+                <Button x:Name="InfoButton" Text="Kaip žaisti?" Grid.Row="1" Grid.Column="1" Clicked="InfoButton_Clicked" BorderRadius="80"></Button>
 
-                <Image  Grid.Row="1" Grid.Column="1" Source="lord.jpg" Aspect="AspectFill"></Image>
-                <Button x:Name="myLOTR" Grid.Row="1" Grid.Column="1" Opacity="0" Clicked="myLOTR_Clicked"></Button>
-
-
-                <Image Grid.Row="2" Grid.Column="0" Source="Harry.jpg" Aspect="AspectFill"></Image>
-                <Button x:Name="myHP" Grid.Row="2" Grid.Column="0" Opacity="0" Clicked="myHP_Clicked"></Button>
-
-
-                <Image  Grid.Row="2" Grid.Column="1" Source="friends.jpg" Aspect="AspectFill"></Image>
-                <Button x:Name="myFriend" Grid.Row="2" Grid.Column="1" Opacity="0" Clicked="myFriend_Clicked"></Button>
-
-                <Image Grid.Row="3" Grid.Column="0" Source="animals.jpg" Aspect="AspectFill"></Image>
-                <Button x:Name="myAnimal" Grid.Row="3" Grid.Column="0" Opacity="0" Clicked="myAnimal_Clicked"></Button>
+                <Image  Grid.Row="2" Grid.Column="0" Source="GOT.jpg" Aspect="AspectFill"></Image>
+                <Button x:Name="myGOT" Grid.Row="2" Grid.Column="0" Opacity="0" Clicked="myGOT_Clicked" ></Button>
 
 
-                <Image Grid.Row="3" Grid.Column="1" Source="AOM.jpg" Aspect="AspectFill"></Image>
-                <Button x:Name="myAOM" Grid.Row="3" Grid.Column="1" Opacity="0" Clicked="myAOM_Clicked"></Button>
+                <Image  Grid.Row="2" Grid.Column="1" Source="lord.jpg" Aspect="AspectFill"></Image>
+                <Button x:Name="myLOTR" Grid.Row="2" Grid.Column="1" Opacity="0" Clicked="myLOTR_Clicked"></Button>
+
+
+                <Image Grid.Row="3" Grid.Column="0" Source="Harry.jpg" Aspect="AspectFill"></Image>
+                <Button x:Name="myHP" Grid.Row="3" Grid.Column="0" Opacity="0" Clicked="myHP_Clicked"></Button>
+
+
+                <Image  Grid.Row="3" Grid.Column="1" Source="friends.jpg" Aspect="AspectFill"></Image>
+                <Button x:Name="myFriend" Grid.Row="3" Grid.Column="1" Opacity="0" Clicked="myFriend_Clicked"></Button>
+
+                <Image Grid.Row="4" Grid.Column="0" Source="animals.jpg" Aspect="AspectFill"></Image>
+                <Button x:Name="myAnimal" Grid.Row="4" Grid.Column="0" Opacity="0" Clicked="myAnimal_Clicked"></Button>
+
+
+                <Image Grid.Row="4" Grid.Column="1" Source="AOM.jpg" Aspect="AspectFill"></Image>
+                <Button x:Name="myAOM" Grid.Row="4" Grid.Column="1" Opacity="0" Clicked="myAOM_Clicked"></Button>
 
             </Grid>
         </ScrollView>

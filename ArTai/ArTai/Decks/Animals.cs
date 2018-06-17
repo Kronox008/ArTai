@@ -122,7 +122,7 @@ namespace ArTai.Decks
 
                 Global.Deckcounter = countEN;
                 Global.DeckName = "Animals";
-                Global.DeckInfo = "Animals around the world";
+                Global.DeckInfo = "Animals around the world.";
                 Randomizing.Randomize(allQuestions_in_orderEN);
 
                 //for (int i = 0; i < Global.QuestionQuantity; i++)
@@ -245,7 +245,7 @@ namespace ArTai.Decks
 
                 Global.Deckcounter = countLT;
                 Global.DeckName = "Gyvūnai";
-                Global.DeckInfo = "Kaladės informacija";
+                Global.DeckInfo = "Pasaulio gyvūnai.";
                 Randomizing.Randomize(allQuestions_in_orderLT);
 
             }

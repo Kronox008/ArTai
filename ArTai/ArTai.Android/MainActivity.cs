@@ -33,7 +33,7 @@ namespace ArTai.Droid
                 ToastMessage = "Tap back button again to exit.";
                 
             });
-            MessagingCenter.Subscribe<GameSelectionPage>(this, "1", sender =>   // 0 - english language, setting toast message on double tap to exit
+            MessagingCenter.Subscribe<GameSelectionPage>(this, "1", sender =>   // 1 - lithuanian language, setting toast message on double tap to exit
             {
                 ToastMessage = "Paspauskite Atgal dar kartą norint išeiti.";
 

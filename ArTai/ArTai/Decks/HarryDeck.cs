@@ -123,7 +123,7 @@ namespace ArTai.Decks
 
                 Global.Deckcounter = countEN;
                 Global.DeckName = "Harry Potter deck";
-                Global.DeckInfo = "deck info";
+                Global.DeckInfo = "Harry Potter characters, quotes, spells, places, items.";
                 Randomizing.Randomize(allQuestions_in_orderEN);
 
             }
@@ -240,7 +240,7 @@ namespace ArTai.Decks
 
                 Global.Deckcounter = countLT;
                 Global.DeckName = "Hario Poterio kaladė";
-                Global.DeckInfo = "Kaladės informacija";
+                Global.DeckInfo = "Hario Poterio personažai, citatos, burtai, vietos, daiktai.";
                 Randomizing.Randomize(allQuestions_in_orderLT);
 
 

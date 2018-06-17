@@ -98,7 +98,7 @@ namespace ArTai.Decks
 
                 Global.Deckcounter = countEN;
                 Global.DeckName = "Game of Thrones";
-                Global.DeckInfo = "Game Of Thrones characters, quotes, cities, places.";
+                Global.DeckInfo = "Game Of Thrones characters, quotes, cities, places, castles, items.";
                 Randomizing.Randomize(allQuestions_in_orderEN);
 
                 //for (int i = 0; i < Global.QuestionQuantity; i++)
@@ -197,7 +197,7 @@ namespace ArTai.Decks
 
                 Global.Deckcounter = countLT;
                 Global.DeckName = "Sostų karai";
-                Global.DeckInfo = "Kaladės informacija";
+                Global.DeckInfo = "Game Of Thrones personažai, citatos, miestai, vietos, daiktai.";
                 Randomizing.Randomize(allQuestions_in_orderLT);
 
             }

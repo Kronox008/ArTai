@@ -1,3 +1,6 @@
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\bin\Debug\netstandard2.0\ArTai.deps.json
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\bin\Debug\netstandard2.0\ArTai.dll
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\bin\Debug\netstandard2.0\ArTai.pdb
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\AfterGamePage.xaml.g.cs
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\GameplayPage.xaml.g.cs
@@ -8,10 +11,6 @@ C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\Setting
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\ArTai.csproj.CoreCompileInputs.cache
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\ArTai.AssemblyInfoInputs.cache
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\ArTai.AssemblyInfo.cs
-C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\bin\Debug\netstandard2.0\ArTai.deps.json
-C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\bin\Debug\netstandard2.0\ArTai.dll
-C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\bin\Debug\netstandard2.0\ArTai.pdb
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\ArTai.dll
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\ArTai.pdb
-C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Debug\netstandard2.0\ArTai.csprojAssemblyReference.cache

@@ -73,7 +73,7 @@ namespace ArTai.Decks
 
                 Global.Deckcounter = countEN;
                 Global.DeckName = "F.R.I.E.N.D.S Deck";
-                Global.DeckInfo = "deck info supposed to be here.......";
+                Global.DeckInfo = "Friends characters, quotes, places, items.";
                 Randomizing.Randomize(allQuestions_in_orderEN);
 
 
@@ -146,7 +146,7 @@ namespace ArTai.Decks
 
                 Global.Deckcounter = countLT;
                 Global.DeckName = "D.R.A.U.G.A.I kaladė";
-                Global.DeckInfo = "Kaladės informacija";
+                Global.DeckInfo = "Draugų personažai, citatos, vietos, daiktai.";
                 Randomizing.Randomize(allQuestions_in_orderLT);
 
 

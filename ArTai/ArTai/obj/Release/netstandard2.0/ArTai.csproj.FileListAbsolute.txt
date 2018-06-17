@@ -1,0 +1,16 @@
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\bin\Release\netstandard2.0\ArTai.deps.json
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\bin\Release\netstandard2.0\ArTai.dll
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\bin\Release\netstandard2.0\ArTai.pdb
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Release\netstandard2.0\AfterGamePage.xaml.g.cs
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Release\netstandard2.0\App.xaml.g.cs
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Release\netstandard2.0\GameplayPage.xaml.g.cs
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Release\netstandard2.0\GameSelectionPage.xaml.g.cs
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Release\netstandard2.0\InfoPage.xaml.g.cs
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Release\netstandard2.0\SelectedGameInfoPage.xaml.g.cs
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Release\netstandard2.0\Settings.xaml.g.cs
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Release\netstandard2.0\ArTai.csproj.CoreCompileInputs.cache
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Release\netstandard2.0\ArTai.AssemblyInfoInputs.cache
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Release\netstandard2.0\ArTai.AssemblyInfo.cs
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Release\netstandard2.0\XamlC.stamp
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Release\netstandard2.0\ArTai.dll
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai\obj\Release\netstandard2.0\ArTai.pdb

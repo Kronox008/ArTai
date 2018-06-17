@@ -52,7 +52,12 @@ namespace ArTai
 
         protected override void OnResume()
         {
-            // Handle when your app resumes
+            MainPage = new NavigationPage(new GameSelectionPage())
+            {
+                //BarBackgroundColor = Color.FromHex(Global.ButtonBackColor),
+                //BarTextColor = Color.FromHex(Global.ButtonTextWhiteColor),
+
+            };
         }
 
 
