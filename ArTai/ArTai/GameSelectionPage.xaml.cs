@@ -200,6 +200,7 @@ namespace ArTai
             myGOT.IsEnabled          = true;
             myAOM.IsEnabled          = true;
             myAnimal.IsEnabled       = true;
+            myPeople.IsEnabled       = true;
         }
 
         private async void LanguagePicker_SelectedIndexChanged(object sender, EventArgs e)
@@ -234,6 +235,6 @@ namespace ArTai
 
         }
 
-       
+
     }
 }

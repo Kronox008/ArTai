@@ -84,7 +84,7 @@ namespace ArTai
                     allSounds.Mythsounds();
                     break;
                 case 7:
-                    allSounds.Mythsounds();
+                    allSounds.Peoplesounds();
                     break;
                 default:
                     break;

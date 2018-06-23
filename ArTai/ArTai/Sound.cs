@@ -254,6 +254,57 @@ namespace ArTai
             allSounds.Play();
 
         }
+        public void Peoplesounds()
+        {
+            System.Random RandomNumber = new System.Random();
+
+            string soundName0 = "TechArchaeology.wav";
+            string soundName1 = "TechIronWorking.wav";
+            string soundName2 = "TechMathematics.wav";
+            string soundName3 = "TechSteamPower.wav";
+            string soundName4 = "TechTheology.wav";
+            string soundName5 = "TechWriting.wav";
+
+            string soundPath = "ArTai.Sounds.People.";
+
+            allSounds = CrossSimpleAudioPlayer.CreateSimpleAudioPlayer();
+
+            int soundNumber = RandomNumber.Next(0, 6);
+
+            switch (soundNumber)
+            {
+                case 0:
+                    var PEOPLE0 = GetStream(soundPath, soundName0);
+                    allSounds.Load(PEOPLE0);
+                    break;
+                case 1:
+                    var PEOPLE1 = GetStream(soundPath, soundName1);
+                    allSounds.Load(PEOPLE1);
+                    break;
+                case 2:
+                    var PEOPLE2 = GetStream(soundPath, soundName2);
+                    allSounds.Load(PEOPLE2);
+                    break;
+                case 3:
+                    var PEOPLE3 = GetStream(soundPath, soundName3);
+                    allSounds.Load(PEOPLE3);
+                    break;
+                case 4:
+                    var PEOPLE4 = GetStream(soundPath, soundName4);
+                    allSounds.Load(PEOPLE4);
+                    break;
+                case 5:
+                    var PEOPLE5 = GetStream(soundPath, soundName5);
+                    allSounds.Load(PEOPLE5);
+                    break;
+                default:
+                    break;
+            }
+
+            allSounds.Volume = Global.SoundVolume;
+            allSounds.Play();
+
+        }
         // Theme Sounds end
 
         //GamePLay Sounds start

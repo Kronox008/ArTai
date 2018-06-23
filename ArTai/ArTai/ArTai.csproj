@@ -39,6 +39,12 @@
     <None Remove="Sounds\Myth\godpower.wav" />
     <None Remove="Sounds\Myth\xsentinelbirth.wav" />
     <None Remove="Sounds\Myth\xwin.wav" />
+    <None Remove="Sounds\People\TechArchaeology.wav" />
+    <None Remove="Sounds\People\TechIronWorking.wav" />
+    <None Remove="Sounds\People\TechMathematics.wav" />
+    <None Remove="Sounds\People\TechSteamPower.wav" />
+    <None Remove="Sounds\People\TechTheology.wav" />
+    <None Remove="Sounds\People\TechWriting.wav" />
   </ItemGroup>
 
   <ItemGroup>
@@ -74,6 +80,12 @@
     <EmbeddedResource Include="Sounds\Myth\godpower.wav" />
     <EmbeddedResource Include="Sounds\Myth\xsentinelbirth.wav" />
     <EmbeddedResource Include="Sounds\Myth\xwin.wav" />
+    <EmbeddedResource Include="Sounds\People\TechArchaeology.wav" />
+    <EmbeddedResource Include="Sounds\People\TechIronWorking.wav" />
+    <EmbeddedResource Include="Sounds\People\TechMathematics.wav" />
+    <EmbeddedResource Include="Sounds\People\TechSteamPower.wav" />
+    <EmbeddedResource Include="Sounds\People\TechTheology.wav" />
+    <EmbeddedResource Include="Sounds\People\TechWriting.wav" />
   </ItemGroup>
 
   <ItemGroup>

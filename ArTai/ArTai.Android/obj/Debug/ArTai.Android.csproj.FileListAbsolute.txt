@@ -45,6 +45,7 @@ C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\res\drawable\c
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\res\drawable\splash.png
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\res\drawable\splash_screen.xml
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\res\drawable-hdpi\caty.png
+C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\res\drawable-xxhdpi\people.jpg
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\R.cs.flag
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\R.txt
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\uploadflags.txt
@@ -137,7 +138,6 @@ C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\android\assets
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\android\assets\System.Xml.pdb
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\android\assets\Xamarin.Forms.Core.pdb
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.pdb
-C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\res\drawable-xxhdpi\people.jpg
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\bin\Debug\ArTai.Android.dll
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\linksrc\ArTai.pdb
 C:\Users\Unknown\source\repos\ArTai\ArTai\ArTai.Android\obj\Debug\linksrc\ArTai.Android.dll.mdb
